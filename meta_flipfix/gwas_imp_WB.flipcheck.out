@@ -1,0 +1,80 @@
+Alanine_aminotransferase /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Alanine_aminotransferase_all.glm.linear.filtered.maf001.info03.tsv.gz
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Albumin /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Albumin_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Alkaline_phosphatase /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Alkaline_phosphatase_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Apolipoprotein_A /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Apolipoprotein_A_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Apolipoprotein_B_adjstatins /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Apolipoprotein_B_adjstatins_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Apolipoprotein_B /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Apolipoprotein_B_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Aspartate_aminotransferase /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Aspartate_aminotransferase_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Calcium /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Calcium_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Cholesterol_adjstatins /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Cholesterol_adjstatins_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Cholesterol /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Cholesterol_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+C_reactive_protein /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_C_reactive_protein_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Creatinine_in_urine /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Creatinine_in_urine_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Creatinine /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Creatinine_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Cystatin_C /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Cystatin_C_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Direct_bilirubin /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Direct_bilirubin_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+eGFR /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_eGFR_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Fasting_glucose /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Fasting_glucose_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Gamma_glutamyltransferase /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Gamma_glutamyltransferase_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Glucose /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Glucose_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Glycated_haemoglobin_HbA1c /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Glycated_haemoglobin_HbA1c_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+HDL_cholesterol /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_HDL_cholesterol_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+IGF_1 /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_IGF_1_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+LDL_direct_adjstatins /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_LDL_direct_adjstatins_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+LDL_direct /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_LDL_direct_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Lipoprotein_A /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Lipoprotein_A_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Microalbumin_in_urine /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Microalbumin_in_urine_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Non_albumin_protein /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Non_albumin_protein_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Oestradiol /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Oestradiol_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Phosphate /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Phosphate_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Potassium_in_urine /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Potassium_in_urine_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Rheumatoid_factor /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Rheumatoid_factor_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+SHBG /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_SHBG_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Sodium_in_urine /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Sodium_in_urine_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Testosterone /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Testosterone_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Total_bilirubin /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Total_bilirubin_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Total_protein /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Total_protein_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Triglycerides /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Triglycerides_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Urate /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Urate_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Urea /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Urea_all.glm.linear.filtered.maf001.info03.tsv
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
+Vitamin_D /oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Vitamin_D_all.glm.linear.filtered.maf001.info03.tsv.gz
+ID	SNP	TOTAL_MAF	CHROM	POS	REF	ALT1	ALT	A1	AX	A1_CT	ALLELE_CT	A1_FREQ	MACH_R2	TEST	OBS_CT	BETA	SE	T_STAT	P	FASTA_REF
