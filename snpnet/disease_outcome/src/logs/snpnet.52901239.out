@@ -1,0 +1,44 @@
+[1] ‘2.0.20’
+[1] "HC299"
+Start snpnet: 2019-10-18 08:54:06 
+Preprocessing start: 2019-10-18 08:54:06 
+  Start computing stats for pnas ...
+  End computing stats for pnas. Time elapsed: 41.983 mins
+  Start computing stats for means ...
+  End computing stats for means. Time elapsed: 53.9314 mins
+Preprocessing end: 2019-10-18 10:30:09 
+
+Iteration 0. Now time: 2019-10-18 10:30:09 
+  Start computing inner product for initialization ...
+  End computing inner product for initialization. Elapsed time: 5.0964 mins 
+
+Iteration 1. Now time: 2019-10-18 10:35:18
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.0745 mins 
+  -- Number of ever-active variables: 7.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 1007.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 17.9732 secs 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.0005431175 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 1.535171 secs
+  End checking KKT condition. Elapsed time: 27.5373 mins 
+  -- Finished Lambda 1. Training Metric: 0.7475428. Validation Metric:  0.7341567 
+  -- Finished Lambda 2. Training Metric: 0.7476888. Validation Metric:  0.7341608 
+  -- Finished Lambda 3. Training Metric: 0.7480052. Validation Metric:  0.7342512 
+  -- Finished Lambda 4. Training Metric: 0.748438. Validation Metric:  0.734375 
+  -- Finished Lambda 5. Training Metric: 0.7492649. Validation Metric:  0.7345016 
+  -- Finished Lambda 6. Training Metric: 0.7507592. Validation Metric:  0.7347639 
+  -- Finished Lambda 7. Training Metric: 0.75341. Validation Metric:  0.7350081 
+  -- Finished Lambda 8. Training Metric: 0.7574546. Validation Metric:  0.7351837 
+  -- Finished Lambda 9. Training Metric: 0.7631789. Validation Metric:  0.7350392 
+  -- Finished Lambda 10. Training Metric: 0.7711544. Validation Metric:  0.7344894 
+Time spent on this iteration: 28.9428 mins. Elapsed time since start: 2.1692 hours.
+
+Early stopped at iteration 1 with validation metric: 0.7351837.
+Previous ones: 0.735039230230609, 0.734489377233502.
+End snpnet: 2019-10-18 11:04:15 
+Total time elapsed: 2.169187 hours 

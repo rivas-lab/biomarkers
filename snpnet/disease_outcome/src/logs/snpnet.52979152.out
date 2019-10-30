@@ -1,0 +1,260 @@
+[1] ‘2.0.20’
+[1] "HC326"
+Start snpnet: 2019-10-20 13:20:31 
+Preprocessing start: 2019-10-20 13:20:31 
+File /oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome/out/HC326/results/meta/pnas.rda exists. Computation skipped.
+File /oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome/out/HC326/results/meta/means.rda exists. Computation skipped.
+Preprocessing end: 2019-10-20 13:20:41 
+
+Recover iteration 20. Now time: 2019-10-20 13:20:41
+Time elapsed on loading back features: 2.698 mins 
+
+Iteration 21. Now time: 2019-10-20 13:23:24
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.0156 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7275 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.01918626 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.017185 secs
+  End checking KKT condition. Elapsed time: 2.8257 hours 
+Time spent on this iteration: 2.9056 hours. Elapsed time since start: 2.9537 hours.
+
+Iteration 22. Now time: 2019-10-20 16:17:45
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.2476 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7282 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.03697538 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.032385 secs
+  End checking KKT condition. Elapsed time: 2.8567 hours 
+Time spent on this iteration: 2.9406 hours. Elapsed time since start: 5.8945 hours.
+
+Iteration 23. Now time: 2019-10-20 19:14:12
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.2672 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7159 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.001284599 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.038212 secs
+  End checking KKT condition. Elapsed time: 3.3878 hours 
+Time spent on this iteration: 3.4717 hours. Elapsed time since start: 9.3664 hours.
+
+Iteration 24. Now time: 2019-10-20 22:42:31
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1419 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.727 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.02405429 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.602127 secs
+  End checking KKT condition. Elapsed time: 2.9203 hours 
+Time spent on this iteration: 3.0024 hours. Elapsed time since start: 12.369 hours.
+
+Iteration 25. Now time: 2019-10-21 01:42:40
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.3758 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7435 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.02663636 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 5.98252 secs
+  End checking KKT condition. Elapsed time: 2.8641 hours 
+Time spent on this iteration: 2.9503 hours. Elapsed time since start: 15.3196 hours.
+
+Iteration 26. Now time: 2019-10-21 04:39:42
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 57.63 secs 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7384 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.02427912 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.056374 secs
+  End checking KKT condition. Elapsed time: 2.6834 hours 
+Time spent on this iteration: 2.7623 hours. Elapsed time since start: 18.0821 hours.
+
+Iteration 27. Now time: 2019-10-21 07:25:27
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.0928 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7128 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.009083748 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 5.578605 secs
+  End checking KKT condition. Elapsed time: 2.9291 hours 
+Time spent on this iteration: 3.0098 hours. Elapsed time since start: 21.0921 hours.
+
+Iteration 28. Now time: 2019-10-21 10:26:03
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 2.1493 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.52 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.01810408 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.037616 secs
+  End checking KKT condition. Elapsed time: 2.8208 hours 
+Time spent on this iteration: 2.9159 hours. Elapsed time since start: 1.0003 days.
+
+Iteration 29. Now time: 2019-10-21 13:21:01
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1997 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7434 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.01713514 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.556988 secs
+  End checking KKT condition. Elapsed time: 3.0362 hours 
+Time spent on this iteration: 3.1193 hours. Elapsed time since start: 1.1303 days.
+
+Iteration 30. Now time: 2019-10-21 16:28:12
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1248 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 4.0258 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.02847075 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.13084 secs
+  End checking KKT condition. Elapsed time: 2.725 hours 
+Time spent on this iteration: 2.8118 hours. Elapsed time since start: 1.2475 days.
+
+Iteration 31. Now time: 2019-10-21 19:16:55
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1234 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7284 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.04741311 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.052859 secs
+  End checking KKT condition. Elapsed time: 2.812 hours 
+Time spent on this iteration: 2.8935 hours. Elapsed time since start: 1.3681 days.
+
+Iteration 32. Now time: 2019-10-21 22:10:32
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1683 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.6319 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.0305717 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.514514 secs
+  End checking KKT condition. Elapsed time: 2.8888 hours 
+Time spent on this iteration: 2.9697 hours. Elapsed time since start: 1.4918 days.
+
+Iteration 33. Now time: 2019-10-22 01:08:44
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.073 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.9836 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.0107758 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.510791 secs
+  End checking KKT condition. Elapsed time: 3.0735 hours 
+Time spent on this iteration: 3.1585 hours. Elapsed time since start: 1.6234 days.
+
+Iteration 34. Now time: 2019-10-22 04:18:15
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.3254 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.9823 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.01559711 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.185211 secs
+  End checking KKT condition. Elapsed time: 3.2112 hours 
+Time spent on this iteration: 3.3003 hours. Elapsed time since start: 1.7609 days.
+
+Iteration 35. Now time: 2019-10-22 07:36:17
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.274 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.8566 mins 
+  Start checking KKT condition ...
+[1] "Time of convertion to validation matrix"
+Time difference of 0.03888559 secs
+[1] "Time of prediction on validation matrix"
+Time difference of 6.10545 secs
+  End checking KKT condition. Elapsed time: 2.9914 hours 
+Time spent on this iteration: 3.0775 hours. Elapsed time since start: 1.8892 days.
+
+Iteration 36. Now time: 2019-10-22 10:40:57
+  Start updating feature matrix ...
+  End updating feature matrix. Time elapsed: 1.1209 mins 
+  -- Number of ever-active variables: 1989.
+  -- Number of newly added variables: 1000.
+  -- Total number of variables in the strong set: 2989.
+  Start fitting Glmnet ...
+  End fitting Glmnet. Elapsed time: 3.7502 mins 
+  Start checking KKT condition ...

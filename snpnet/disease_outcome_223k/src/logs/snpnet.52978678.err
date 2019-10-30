@@ -1,0 +1,62 @@
+[/var/spool/slurmd/job52978678/slurm_script 20191020-130941] [start] hostname = sh-109-55.int SLURM_JOBID = 52978678; phenotype = HC188
+tmp_dir = /lscratch/ytanigaw/tmp-snpnet_wrapper.sh-20191020-130941-1N1XnMQ36j
+===================config_file===================
+#key	val
+snpnet_dir	/oak/stanford/groups/mrivas/software/snpnet
+mem2bufferSizeDivisionFactor	5
+cpu	8
+mem	150000
+niter	100
+genotype_dir	/scratch/users/ytanigaw/tmp/snpnet/geno/array_combined
+out_dir_root	/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome_223k/out
+phenotype_file	/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome_223k/phe/phe.tsv
+phenotype_name	HC188
+family	binomial
+covariates	age,sex,Array,PC1,PC2,PC3,PC4
+prevIter	15
+===================config_file===================
+Loading required package: tidyverse
+── Attaching packages ─────────────────────────────────────── tidyverse 1.2.1 ──
+✔ ggplot2 3.1.0       ✔ purrr   0.3.1  
+✔ tibble  2.0.1       ✔ dplyr   0.8.0.1
+✔ tidyr   0.8.3       ✔ stringr 1.4.0  
+✔ readr   1.3.1       ✔ forcats 0.4.0  
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+Loading required package: glmnet
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:tidyr’:
+
+    expand
+
+Loading required package: foreach
+
+Attaching package: ‘foreach’
+
+The following objects are masked from ‘package:purrr’:
+
+    accumulate, when
+
+Loaded glmnet 2.0-20
+
+Loading required package: survival
+Loading snpnet
+Error in snpnet(genotype.dir = config[["genotype_dir"]], phenotype.file = phenotype.file,  : 
+  prevIter is greater or equal to the total number of iterations.
+Execution halted
