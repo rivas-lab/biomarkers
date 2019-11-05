@@ -18,8 +18,8 @@ wrapper="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/PRS/helper/s
 family="binomial"
 
 geno_dir="/scratch/users/ytanigaw/tmp/snpnet/geno/array_combined"
-out_dir_root="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome_223k/out"
-phe_file="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/snpnet/disease_outcome_223k/phe/phe.tsv"
+out_dir_root="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome_223k/out"
+phe_file="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome_223k/phe/phe.tsv"
 covariates="age,sex,Array,PC1,PC2,PC3,PC4"
 
 echo "[$0 $(date +%Y%m%d-%H%M%S)] [start] hostname = $(hostname) SLURM_JOBID = ${SLURM_JOBID:=0}; phenotype = ${phenotype_name}" >&2

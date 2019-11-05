@@ -1,0 +1,40 @@
+name	annotation
+Alanine aminotransferase	Alanine_aminotransferase
+Albumin	Albumin
+Alkaline phosphatase	Alkaline_phosphatase
+Apolipoprotein A	Apolipoprotein_A
+Apolipoprotein B	Apolipoprotein_B_adjstatins
+Aspartate aminotransferase	Aspartate_aminotransferase
+Calcium	Calcium
+Cholesterol	Cholesterol_adjstatins
+C-reactive protein	C_reactive_protein
+Creatinine	Creatinine
+Cystatin C	Cystatin_C
+Direct bilirubin	Direct_bilirubin
+Gamma glutamyltransferase	Gamma_glutamyltransferase
+Glucose	Glucose
+Fasting glucose	Fasting_glucose
+HbA1c	Glycated_haemoglobin_HbA1c
+HDL cholesterol	HDL_cholesterol
+IGF-1	IGF_1
+LDL cholesterol	LDL_direct_adjstatins
+Lipoprotein A	Lipoprotein_A
+Phosphate	Phosphate
+SHBG	SHBG
+Testosterone	Testosterone
+Total bilirubin	Total_bilirubin
+Total protein	Total_protein
+Triglycerides	Triglycerides
+Urate	Urate
+Urea	Urea
+Vitamin D	Vitamin_D
+Creatinine in urine	Creatinine_in_urine
+eGFR	eGFR
+Microalbumin in urine	Microalbumin_in_urine
+Potassium in urine	Potassium_in_urine
+Sodium in urine	Sodium_in_urine
+Non-albumin protein	Non_albumin_protein
+Microalbumin above 40 mg/L	MicroalbuminNormal
+Rheumatoid factor above 16 IU/mL	RheumatoidFactorNormal
+Urine albumin-to-creatinine ratio above 30mg/g	UACRNormal
+Oestradiol above 212 pmol/L	OestradiolNormal
