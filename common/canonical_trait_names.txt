@@ -34,7 +34,4 @@ Microalbumin in urine	Microalbumin_in_urine
 Potassium in urine	Potassium_in_urine
 Sodium in urine	Sodium_in_urine
 Non-albumin protein	Non_albumin_protein
-Microalbumin above 40 mg/L	MicroalbuminNormal
-Rheumatoid factor above 16 IU/mL	RheumatoidFactorNormal
-Urine albumin-to-creatinine ratio above 30mg/g	UACRNormal
-Oestradiol above 212 pmol/L	OestradiolNormal
+AST to ALT ratio	AST_ALT_ratio
