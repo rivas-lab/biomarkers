@@ -1,0 +1,235 @@
+import pandas
+import os.path
+import glob
+import math
+
+LDSC_BASE_DIR = "/scratch/PI/pritch/nasa/tools/ldsc"
+GWAS_LIST = "phenotypes.diversebinary.txt"
+GWAS_JUSTALL_LIST = "phenotypes.justall.diversebinary.txt"
+
+P2_ACTIVATE="~/env/bin/activate"
+P3_ACTIVATE="~/p3/bin/activate"
+
+gwas = pandas.read_csv(GWAS_LIST, names=["name", "phenotype", "path", "type", "covariates"], sep="\t")
+gwas.set_index("name", inplace=True)
+
+gwas_justall = pandas.read_csv(GWAS_JUSTALL_LIST, names=["name", "phenotype", "path", "type", "covariates"], sep="\t")
+gwas_justall.set_index("name", inplace=True)
+
+gwas_combined = gwas.append(gwas_justall)
+
+PLINK2="plink2"
+PLINK="/scratch/PI/pritch/nasa/tools/plink/plink"
+PGEN_DIR="/oak/stanford/projects/ukbb/genotypes/pgen_app13721_v3/"
+# This is different than PGEN_DIR because using the 24983 application instead of 13721
+PSAM_DIR="/oak/stanford/groups/mrivas/projects/biomarkers/gwas/1000g/24983fam/"
+
+# The path used for the clumping
+#CLUMP_BED_PATH="/oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british"
+
+CLUMP_BED_PATH="/oak/stanford/groups/mrivas/ukbb/24983/cal/pgen/ukb24983_cal_cALL_v2"
+
+
+PHENOTYPE_DIR="/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/"
+
+population_prefix="/oak/stanford/groups/mrivas/ukbb24983/sqc/population_stratification_w24983_20190809/ukb24983_%s.exclude.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.king.king.cutoff.in.qc.exclude.id"
+population_pca_prefix="covar.binary.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
+#population_pca_prefix="covar.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
+
+populations = ["african", "e_asian", "s_asian", "non_british_white", "white_british"]
+#populations = ["african", "chinese", "southasian", "white"]
+
+OUTPUT_PATH="/oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/"
+
+full_subset_list = ["male", "female"]
+#full_subset_list = ["all", "male", "female", "not2d"]
+#full_subset_list = ["all", "male", "female", "t2d", "not2d"]
+
+rule all:
+    input:
+        expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/gwas/{name}_{subset}.glm.linear.gz"), name = [str(s) for s in gwas.index], subset=full_subset_list, population=populations), 
+        #expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/clumped/{name}_{subset}.clumped"), name=[str(s) for s in gwas.index], subset=full_subset_list, population=populations),
+        expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/gwas/{name}_{subset}.glm.linear.gz"), name = [str(s) for s in gwas_justall.index], subset=["all"], population=populations), 
+        #expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/clumped/{name}_{subset}.clumped"), name=[str(s) for s in gwas_justall.index], subset=["all"], population=populations),
+        #expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/hits5e8/{name}_{subset}.hits"), name=[str(s) for s in gwas_justall.index], subset=["all"], population=populations),
+        #expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/hits5e8/{name}_{subset}.hits"), name=[str(s) for s in gwas.index], subset=full_subset_list, population=populations),
+        expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"), name=[str(s) for s in gwas_justall.index], subset=["all"], population=populations),
+        expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"), name=[str(s) for s in gwas.index], subset=full_subset_list, population=populations),
+        #expand(os.path.join(OUTPUT_PATH, "{population}/ldsc/cellgroups/{name}_{subset}.allgroups.results"), name=[str(s) for s in gwas_justall.index], subset=["all"], population=populations),
+        #expand(os.path.join(OUTPUT_PATH, "{population}/ldsc/cellgroups/{name}_{subset}.allgroups.results"), name=[str(s) for s in gwas.index], subset=full_subset_list, population=populations)
+    params:
+        error_out_file="error_files/ldsc_summarize",
+        out_file="out_files/ldsc_summarize",
+        run_time="00:10:00",
+        cores="1",
+        memory="4G",
+        partition="pritch",
+        job_name="summarize_ldsc"
+    output:
+        "processed.txt"
+    shell:
+        "echo whatever"
+
+rule ldsc_rg:
+    input:
+        path = "{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz",
+        gwas_paths = expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"),
+                            name = [str(s) for s in gwas.index], subset=["all", "male", "female"], population=populations),
+    params:
+        gwas_paths = ",".join(expand(os.path.join(OUTPUT_PATH, "{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"),
+                                     name = [str(s) for s in gwas.index], subset=["all", "male", "female"], population=populations)),
+        run_time="24:00:00",
+        cores="4",
+        memory="12G",
+        partition="pritch,hns,owners,normal",
+        job_name="run_ldsc",
+        path = "{OUTPUT_PATH}/{population}/ldsc/rg/{name}_{subset}.rg"
+    output:
+        path = "{OUTPUT_PATH}/{population}/ldsc/rg/{name}_{subset}.rg.log"
+    shell:
+        "PS1=''; module load python/2.7.13; source " + P2_ACTIVATE + "; ldsc.py --rg {input.path},{params.gwas_paths},{other_paths} --ref-ld-chr ~/scratch/tools/ldsc/1000G.EUR.QC/ --w-ld-chr ~/scratch/tools/ldsc/weights_hm3_no_hla/weights. --out {params.path}; module load python/3.6.1; source " + P3_ACTIVATE
+
+rule ldsc_h2:
+    input:
+        path = "{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"
+    params:
+        run_time="00:20:00",
+        cores="1",
+        memory="8G",
+        partition="pritch,hns,owners,normal",
+        job_name="run_ldsc",
+        path = "{OUTPUT_PATH}/{population}/ldsc/h2/{name}_{subset}.h2"
+    output:
+        path = "{OUTPUT_PATH}/{population}/ldsc/h2/{name}_{subset}.h2.log"
+    shell:
+        "PS1=''; module load python/2.7.13; source " + P2_ACTIVATE + "; ldsc.py --h2 {input.path} --ref-ld-chr ~/scratch/tools/ldsc/1000G.EUR.QC/ --w-ld-chr ~/scratch/tools/ldsc/weights_hm3_no_hla/weights. --out {params.path}; module load python/3.6.1; source " + P3_ACTIVATE
+
+rule ldsc_cts:
+    input:
+        path = "{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"
+    params:
+        run_time="48:00:00",
+        cores="6",
+        memory="20G",
+        partition="pritch,hns,owners,normal",
+        job_name="run_ldsc_cts",
+        path = "{OUTPUT_PATH}/{population}/ldsc/celltype/{name}_{subset}.ct",
+    output:
+        path = "{OUTPUT_PATH}/{population}/ldsc/celltype/{name}_{subset}.cts"
+    shell:
+        "PS1=''; module load python/2.7.13; source " + P2_ACTIVATE + "; for i in `seq 1 396`; do test -f {params.path}${{i}}.log || ldsc.py --h2 {input.path} --ref-ld-chr /home/users/nasa/scratch/tools/ldsc/1000G_EUR_Phase3_baseline/baseline.,/home/users/nasa/pritch/gwas/ldsc/ldscores/Roadmap/Roadmap.${{i}}.,/home/users/nasa/pritch/gwas/ldsc/ldscores/Roadmap/Roadmap.control. --w-ld-chr ~/scratch/tools/ldsc/weights_hm3_no_hla/weights. --out {params.path}${{i}}; done; touch {output.path}; module load python/3.6.1; source " + P3_ACTIVATE
+
+
+rule ldsc_allgroups:
+    input:
+        path = "{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"
+    params:
+        out_prefix="{OUTPUT_PATH}/{population}/ldsc/cellgroups/{name}_{subset}.allgroups",
+        error_out_file="error_files/ldsc_dnasecorrected_h2_{name}",
+        out_file="out_files/ldsc_dnasecorrected_h2_{name}",
+        run_time="00:30:00",
+        cores="1",
+        memory="8G",
+        partition="pritch,hns,owners,normal",
+        job_name="run_ldsc_dnasecorrected"
+    output:
+        "{OUTPUT_PATH}/{population}/ldsc/cellgroups/{name}_{subset}.allgroups.results"
+    shell:
+        "PS1=''; module load python/2.7.13; source " + P2_ACTIVATE + "; ldsc.py --h2 {input.path} --ref-ld-chr " + os.path.join(LDSC_BASE_DIR, "1000G_EUR_Phase3_baseline", "baseline.") + ",~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.1.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.2.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.3.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.4.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.5.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.6.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.7.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.8.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.9.,~/scratch/tools/ldsc/1000G_Phase3_cell_type_groups/cell_type_group.10.,~/pritch/gwas/ldsc/ldscores/Roadmap/Roadmap.control. --w-ld-chr ~/pritch/nasa/tools/ldsc/weights_hm3_no_hla/weights. --overlap-annot --out {params.out_prefix} --frqfile-chr ~/pritch/nasa/tools/ldsc/1000G_frq/1000G.mac5eur.; module load python/3.6.1; source " + P3_ACTIVATE
+
+rule sumstats:
+    input:
+        "{OUTPUT_PATH}/{population}/plink_imputed/filtered/{name}_{subset}.glm.linear.filtered.maf001.info03.tsv.gz"
+    output:
+        "{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}.sumstats.gz"
+    params:
+        error_out_file="error_files/ldsc_sumstats",
+        out_file="out_files/ldsc_sumstats",
+        run_time="00:20:00",
+        cores="1",
+        memory="16G",
+        partition="pritch,hns,owners",
+        job_name="sumstats",
+        prefix="{OUTPUT_PATH}/{population}/plink_imputed/sumstats/{name}_{subset}"
+    shell:
+        "PS1=''; module load python/2.7.13; source " + P2_ACTIVATE + ";"
+        "python ~/scratch/tools/ldsc/munge_sumstats.py --ignore ID,A1 --out {params.prefix} --sumstats {input} --merge-alleles ~/scratch/filtered_ancestral_1000gPhase3.1000gsnp.txt.gz --a1 ALT --a2 REF;"
+        "module load python/3.6.1; source " + P3_ACTIVATE
+
+rule run_plink:
+    input:
+        path = lambda wildcards: os.path.join(PHENOTYPE_DIR, gwas_combined.loc[wildcards.name].path),
+    params:
+        phenotype = lambda wildcards: gwas_combined.loc[wildcards.name].phenotype,
+        covariates = lambda wildcards: gwas_combined.loc[wildcards.name].covariates if isinstance(gwas_combined.loc[wildcards.name].covariates, str) else "",
+        suffix = lambda wildcards: "logistic" if gwas_combined.loc[wildcards.name].type == "binary" else "linear",
+        run_time="48:00:00",
+        cores="16",
+        memory="80G",
+        partition="pritch,hns,mrivas,normal,owners",
+        job_name="plink2",
+        grep=lambda wildcards: "ADDx" if isinstance(gwas_combined.loc[wildcards.name].covariates, str) and "interaction" in gwas_combined.loc[wildcards.name].covariates else "ADD",
+        hidden_covar=lambda wildcards: "" if isinstance(gwas_combined.loc[wildcards.name].covariates, str) and "interaction" in gwas_combined.loc[wildcards.name].covariates else "hide-covar",
+        prefix = "{OUTPUT_PATH}/{population}/plink_imputed/raw_gwas/{name}_{subset}/",
+        population_keep_prefix = lambda wildcards: population_prefix % wildcards.population,
+        population_covar_prefix = population_pca_prefix # % wildcards.population
+        #population_covar_prefix = lambda wildcards: population_pca_prefix % wildcards.population
+    output:
+        path = "{OUTPUT_PATH}/{population}/plink_imputed/gwas/{name}_{subset}.glm.linear.gz"
+    shell:
+        "mkdir -p {params.prefix};"
+        "for chr in X XY; do test -f {params.prefix}${{chr}}.{params.phenotype}.glm.{params.suffix} || " + PLINK2 + " --glm cols=chrom,pos,ref,alt,alt1,ax,a1count,totallele,a1freq,machr2,firth,test,nobs,beta,se,ci,tz,p {params.hidden_covar} omit-ref {params.covariates} --covar-variance-standardize --pgen {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pgen --pvar {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pvar --psam <(awk '{{OFS=\"\t\"; if (NR>1) $3 = 0; print;}}' {PSAM_DIR}/ukb_imp_chr${{chr}}_v3.mac1.psam ) --remove {params.population_keep_prefix} --keep keep.{wildcards.subset}.txt --covar {params.population_covar_prefix} --out {params.prefix}${{chr}} --pheno {input.path} --geno 0.2 --hwe 1e-50 midp --threads 16; if [ \"{params.phenotype}\" != \"{wildcards.name}\" ]; then ln -f -s {params.prefix}${{chr}}.{params.phenotype}.glm.{params.suffix} {params.prefix}${{chr}}.{wildcards.name}.glm.{params.suffix}; fi; done;"
+        "for chr in `seq 1 22`; do test -f {params.prefix}${{chr}}.{params.phenotype}.glm.{params.suffix} || " + PLINK2 + " --glm cols=chrom,pos,ref,alt,alt1,ax,a1count,totallele,a1freq,machr2,firth,test,nobs,beta,se,ci,tz,p {params.hidden_covar} omit-ref {params.covariates} --covar-variance-standardize --pgen {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pgen --pvar {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pvar --psam {PSAM_DIR}/ukb_imp_chr${{chr}}_v3.mac1.psam --remove {params.population_keep_prefix} --keep keep.{wildcards.subset}.txt --covar {params.population_covar_prefix} --out {params.prefix}${{chr}} --pheno {input.path} --geno 0.2 --hwe 1e-50 midp --threads 16; if [ \"{params.phenotype}\" != \"{wildcards.name}\" ]; then ln -f -s {params.prefix}${{chr}}.{params.phenotype}.glm.{params.suffix} {params.prefix}${{chr}}.{wildcards.name}.glm.{params.suffix}; fi; done;"
+        "find {params.prefix} -name '*.{wildcards.name}.glm.{params.suffix}' | xargs awk '(NR == 1 || (FNR > 1 && $0 ~ /{params.grep}/))' | grep -v 'ADDxSEX' | tr -d '#' | ~/scratch/tools/htslib-1.6/bgzip -c > {output.path}"
+
+
+rule filter_plink:
+    input:
+        "{OUTPUT_PATH}/{population}/plink_imputed/gwas/{name}_{subset}.glm.linear.gz"
+    output:
+        "{OUTPUT_PATH}/{population}/plink_imputed/filtered/{name}_{subset}.glm.linear.filtered.maf001.info03.tsv.gz"
+    params:
+        run_time="4:00:00",
+        cores="1",
+        memory="80G",
+        partition="pritch,hns,mrivas,normal,owners",
+        job_name="filterMAF",
+    shell:
+        "Rscript /oak/stanford/groups/mrivas/projects/biomarkers/sumstats/mfs.R {input} {output}"        
+
+
+rule clump_plink:
+    input:
+        "{OUTPUT_PATH}/{population}/plink_imputed/filtered/{name}_{subset}.glm.linear.filtered.maf001.info03.tsv.gz"
+    params:
+        run_time="36:00:00",
+        cores="1",
+        memory="46G",
+        partition="pritch,hns,owners,normal",
+        job_name="clump_plink",
+        prefix="{OUTPUT_PATH}/{population}/plink_imputed/clumped/{name}_{subset}",
+        population_remove_prefix = lambda wildcards: population_prefix % wildcards.population,
+    output:
+        "{OUTPUT_PATH}/{population}/plink_imputed/clumped/{name}_{subset}.clumped"
+    shell:
+        "for chr in `seq 1 22` X XY; do " + PLINK + " --pgen {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pgen --pvar {PGEN_DIR}/ukb_imp_chr${{chr}}_v3.mac1.pvar --psam {PSAM_DIR}/ukb_imp_chr${{chr}}_v3.mac1.psam --clump {input} --clump-p1 1e-2 --clump-p2 1e-2 --clump-r2 0.01 --clump-kb 10000 --out {params.prefix}.${{chr}} --clump-field P --clump-snp-field ID --remove {params.population_remove_prefix}; done;"
+        "awk '(NR == 1 || FNR > 1 && NF>0) {{print;}}' {params.prefix}.{{1:22,X,XY}}.*  > {output}"
+
+
+rule hits:
+    input:
+        sumstats = "{OUTPUT_PATH}/{population}/plink_imputed/filtered/{name}_{subset}.glm.linear.filtered.maf001.info03.tsv.gz",
+        clump = "{OUTPUT_PATH}/{population}/plink_imputed/clumped/{name}_{subset}.clumped"
+    params:
+        run_time="12:00:00",
+        cores="1",
+        memory="30G",
+        partition="pritch,hns,owners,normal",
+        job_name="hits"
+    output:
+        all = "{OUTPUT_PATH}/{population}/plink_imputed/hits/{name}_{subset}.hits",
+        lt5e8 = "{OUTPUT_PATH}/{population}/plink_imputed/hits5e8/{name}_{subset}.hits"
+    shell:
+        "zgrep -Ff <(awk '{{print $3;}}' {input.clump} |  grep -v '^$' | sed 's/$/\t/') {input.sumstats} > {output.all}; "
+        "awk '($NF < 5e-8 || NR == 1)' {output.all} > {output.lt5e8}"
+        #"zgrep -Ff <(awk '($5 < 5e-8) {{print $3;}}' {input.clump} |  grep -v '^$' | sed 's/$/\t/') {input.sumstats} > {output.lt5e8}"
