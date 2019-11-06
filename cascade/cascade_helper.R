@@ -1,10 +1,7 @@
-suppressPackageStartupMessages(require(tidyverse))
-suppressPackageStartupMessages(require(data.table))
+require(tidyverse)
+require(data.table)
 
 
-######################
-# Read variant annotation file
-######################
 read_annot_arr <- function(annot_arr_file = '/oak/stanford/groups/mrivas/private_data/ukbb/variant_filtering/variant_filter_table.tsv.gz'){
     annot.arr <- fread(
         cmd=paste0('zcat ', annot_arr_file),
@@ -30,57 +27,37 @@ read_annot_arr <- function(annot_arr_file = '/oak/stanford/groups/mrivas/private
 
 }
 
-
-######################
-# Read meta-analysis sumstats for the array
-######################
-read_sumstats <- function(file, pval_thr){
-    df <- fread(
-        cmd=paste0(
-            'zcat ', file, ' | sed -e "s/^#//g"')
-    ) %>%
-    rename('P' = 'P-value') %>%
-    mutate(P = as.numeric(P)) %>%
-    filter(P <= pval_thr)    
+get_filename <- function(trait_name, traits_df = traits, sumstats_dir = res_dir_array){
+    filename <- traits_df %>% filter(trait == trait_name) %>% select(file) %>% pull()
+    file.path(sumstats_dir, filename)
 }
 
-read_array_sumstats_all <- function(traits, pval_thr){
-    array_sumstats_files <- traits %>% select(array_meta) %>% pull()
-    names(array_sumstats_files) <- traits %>% select(phe) %>% pull()
 
-    df <- bind_rows(lapply(
-        names(array_sumstats_files), 
-        function(x){
-            read_sumstats(array_sumstats_files[[x]], pval_thr) %>% mutate(phe = x)
-        }
-    ))
-}
-
-annotate_array_df <- function(array_df, annot.arr, p_thr_df){
-    array_df %>%
-    rename('ID' = 'MarkerName') %>%
-    inner_join(
-        annot.arr %>% 
-        select(ID, maf, ld_indep, Gene_symbol, Gene, HGVSp, Csq, Consequence), 
-        by='ID'
-    ) %>%
-    mutate(
-        is_outside_of_MHC = (
-            (as.numeric(CHROM) != 6) | 
-            (as.numeric(POS) < 25477797 | 36448354 < as.numeric(POS))
-        ),
-        is_rare = as.numeric(maf) < 0.01
-    ) %>%
-    left_join(
-        p_thr_df, by='Csq'
-    ) %>%
-    filter(
-        P <= p_thr
+read_arr_sumstats <- function(trait, traits_df = traits, p_thr_list = p_thr, annot = annot.arr, sumstats_dir = res_dir_array){
+    file_name <- get_filename(trait, traits_df, sumstats_dir)
+    if(endsWith(file_name, 'glm.linear')){
+        df <- fread(
+            cmd=paste0('cat ', file_name, '| cut -f3,6,9,10,12'), 
+            sep='\t', data.table=FALSE
+        ) %>% mutate(phe_type='qt')
+    }else if(endsWith(file_name, 'glm.logistic.hybrid')){
+        df <- fread(
+            cmd=paste0('cat ', file_name, '| cut -f3,6,10,11,13'), 
+            sep='\t', data.table=FALSE
+        ) %>% mutate(BETA = log(OR)) %>% mutate(phe_type='bin')
+    }
+    df %>%
+    drop_na(BETA, SE, P) %>% 
+    mutate(BETA = as.numeric(BETA), SE = as.numeric(SE), P = as.numeric(P)) %>% 
+#     filter(P <= max(unlist(p_thr_list, use.names=FALSE))) %>% 
+    filter(P <= 1e-4) %>%
+    mutate(trait = trait) %>% left_join(annot, by='ID') %>% 
+    select(
+        trait, variant, CHROM, POS, ID, A1, BETA, SE, P, MAF, Csq, Consequence, HGVSp, Gene_symbol, Gene
     )
 }
 
 
-######################
 outlier_detection <- function(sumstats_df, sd_multiplier=3){
     pred.eff <- lm(abs(BETA) ~ log(MAF), sumstats_df)
     sumstats_df %>% mutate(
@@ -92,4 +69,3 @@ outlier_detection <- function(sumstats_df, sd_multiplier=3){
         )
     ) %>% select(-abs_residuals, -residuals)
 }
-
