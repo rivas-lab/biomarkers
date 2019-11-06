@@ -1,0 +1,112 @@
+import pandas
+import os.path
+import glob
+import math
+
+LDSC_BASE_DIR = "/scratch/PI/pritch/nasa/tools/ldsc"
+SUMSTATS_LIST = "sumstats.txt"
+
+P2_ACTIVATE="~/env/bin/activate"
+P3_ACTIVATE="~/p3/bin/activate"
+
+sumstats = pandas.read_table(SUMSTATS_LIST, names=["name", "path"])
+sumstats.set_index("name", inplace=True)
+
+PLINK="/scratch/PI/pritch/nasa/tools/plink/plink"
+
+# The path used for the clumping
+CLUMP_BED_PATH="/oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british"
+
+OUTPUT_PATH="/oak/stanford/groups/mrivas/projects/biomarkers/meta/"
+
+rule all:
+    input:
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/clumped/{name}.clumped"), name=[str(s) for s in sumstats.index]),
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/hits/5e8/{name}.hits"), name=[str(s) for s in sumstats.index]),
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/tagged/{name}.tagged.ld"), name=[str(s) for s in sumstats.index]),
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/clumpmap/{name}.tsv"), name=[str(s) for s in sumstats.index]),
+    params:
+        error_out_file="error_files/ldsc_summarize",
+        out_file="out_files/ldsc_summarize",
+        run_time="00:10:00",
+        cores="1",
+        memory="4G",
+        partition="pritch",
+        job_name="summarize_ldsc"
+    output:
+        "processed.txt"
+    shell:
+        "echo whatever"
+
+rule clump_plink:
+    input:
+        sumstats = lambda wildcards: sumstats.loc[wildcards.name].path
+    params:
+        run_time="36:00:00",
+        cores="1",
+        memory="60G",
+        partition="pritch,hns,owners,normal",
+        job_name="clump_plink",
+        prefix="{OUTPUT_PATH}/plink_imputed/clumped/{name}"
+    output:
+        intermediate = "{OUTPUT_PATH}/plink_imputed/filtered/{name}.sumstats.tsv.gz",
+        clump = "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped"
+    shell:
+        "zcat {input} | awk 'NR==1 || ($(NF-1) > 0.01 && $(NF-1) < 0.99 && $NF > 0.8)' | ~/scratch/tools/htslib-1.6/bgzip -c > {output.intermediate};" +
+        PLINK + " --bfile {CLUMP_BED_PATH} --clump {output.intermediate} --clump-p1 1e-3 --clump-p2 1e-3 --clump-r2 0.0001 --clump-kb 10000 --out {params.prefix} --clump-field P-value --clump-snp-field MarkerName"
+
+
+rule hits:
+    input:
+        sumstats = lambda wildcards: sumstats.loc[wildcards.name].path,
+        clump = "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped"
+    params:
+        run_time="12:00:00",
+        cores="1",
+        memory="30G",
+        partition="pritch,hns,owners,normal",
+        job_name="hits"
+    output:
+        all = "{OUTPUT_PATH}/plink_imputed/hits/1e3/{name}.hits",
+        lt5e8 = "{OUTPUT_PATH}/plink_imputed/hits/5e8/{name}.hits",
+        lt1e5 = "{OUTPUT_PATH}/plink_imputed/hits/1e5/{name}.hits"
+    shell:
+        "zgrep -Ff <(awk '{{print $3;}}' {input.clump} | sed 's/SNP/MarkerName/' | grep -v '^$' | sed 's/$/\t/') {input.sumstats} > {output.all}; "
+        "awk '($6 < 5e-8 || NR == 1)' {output.all} > {output.lt5e8};"
+        "awk '($6 < 1e-5 || NR == 1)' {output.all} > {output.lt1e5}"
+
+rule clumpmap:
+    input:
+        clump = "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped"
+    params:
+        run_time="12:00:00",
+        cores="1",
+        memory="30G",
+        partition="pritch,hns,owners,normal",
+        job_name="hits",
+        r2="0.1",
+    output:
+        map = "{OUTPUT_PATH}/plink_imputed/clumpmap/{name}.tsv",
+    shell:
+        "awk '(NR>1) {{gsub(\",\", \",\" $3 \"#\", $0); print $3 \"#\" $12;}}' {input.clump} | tr ',' '\n' | sed 's/(.*//' | sed 's/#/\t/' > {output.map}"
+
+rule tagged:
+    input:
+        clump = "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped",
+        hits = "{OUTPUT_PATH}/plink_imputed/hits/5e8/{name}.hits"
+    params:
+        run_time="12:00:00",
+        cores="1",
+        memory="30G",
+        partition="pritch,hns,owners,normal",
+        job_name="hits",
+        r2="0.1",
+        prefix = "{OUTPUT_PATH}/plink_imputed/tagged/{name}.tagged"
+    output:
+        vars = "{OUTPUT_PATH}/plink_imputed/tagged/{name}.var",
+        clumped = "{OUTPUT_PATH}/plink_imputed/tagged/{name}.clumped",
+        tagged = "{OUTPUT_PATH}/plink_imputed/tagged/{name}.tagged.ld"
+    shell:
+        "awk '(NR>1) {{print $1;}}' {input.hits} > {output.vars};"
+        "awk '(NR>1) {{print $12;}}' {input.clump} | tr ',' '\n' | sed 's/(.*//' > {output.clumped}; awk '(NR>1) {{print $3;}}' {input.clump} >> {output.clumped};"
+        "plink --bfile /oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british --ld-snp-list {output.vars} --out {params.prefix} --r2 --ld-window-r2 {params.r2} --extract {output.clumped}"

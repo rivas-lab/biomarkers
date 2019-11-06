@@ -1,0 +1,72 @@
+import pandas
+import os.path
+import glob
+import math
+
+LDSC_BASE_DIR = "/scratch/PI/pritch/nasa/tools/ldsc"
+SUMSTATS_LIST = "sumstats.txt"
+
+P2_ACTIVATE="~/env/bin/activate"
+P3_ACTIVATE="~/p3/bin/activate"
+
+sumstats = pandas.read_table(SUMSTATS_LIST, names=["name", "path"])
+sumstats.set_index("name", inplace=True)
+
+PLINK="/scratch/PI/pritch/nasa/tools/plink/plink"
+
+# The path used for the clumping
+CLUMP_BED_PATH="/oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british"
+
+OUTPUT_PATH="/oak/stanford/groups/mrivas/projects/biomarkers/meta/"
+
+rule all:
+    input:
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/clumped/{name}.clumped"), name=[str(s) for s in sumstats.index]),
+        expand(os.path.join(OUTPUT_PATH, "plink_imputed/hits/5e8/{name}.hits"), name=[str(s) for s in sumstats.index]),
+    params:
+        error_out_file="error_files/ldsc_summarize",
+        out_file="out_files/ldsc_summarize",
+        run_time="00:10:00",
+        cores="1",
+        memory="4G",
+        partition="pritch",
+        job_name="summarize_ldsc"
+    output:
+        "processed.txt"
+    shell:
+        "echo whatever"
+
+rule clump_plink:
+    input:
+        sumstats = lambda wildcards: sumstats.loc[wildcards.name].path
+    params:
+        run_time="36:00:00",
+        cores="1",
+        memory="60G",
+        partition="pritch,hns,owners,normal",
+        job_name="clump_plink",
+        prefix="{OUTPUT_PATH}/plink_imputed/clumped/{name}"
+    output:
+        "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped"
+    shell:
+        "" + PLINK + " --bfile {CLUMP_BED_PATH} --clump {input} --clump-p1 1e-3 --clump-p2 1e-3 --clump-r2 0.001 --clump-kb 10000 --out {params.prefix} --clump-field P-value --clump-snp-field MarkerName"
+
+
+rule hits:
+    input:
+        sumstats = lambda wildcards: sumstats.loc[wildcards.name].path,
+        clump = "{OUTPUT_PATH}/plink_imputed/clumped/{name}.clumped"
+    params:
+        run_time="12:00:00",
+        cores="1",
+        memory="30G",
+        partition="pritch,hns,owners,normal",
+        job_name="hits"
+    output:
+        all = "{OUTPUT_PATH}/plink_imputed/hits/1e3/{name}.hits",
+        lt5e8 = "{OUTPUT_PATH}/plink_imputed/hits/5e8/{name}.hits",
+        lt1e5 = "{OUTPUT_PATH}/plink_imputed/hits/1e5/{name}.hits"
+    shell:
+        "zgrep -Ff <(awk '{{print $3;}}' {input.clump} | sed 's/SNP/MarkerName/' | grep -v '^$' | sed 's/$/\t/') {input.sumstats} > {output.all}; "
+        "awk '($6 < 5e-8 || NR == 1)' {output.all} > {output.lt5e8};"
+        "awk '($6 < 1e-5 || NR == 1)' {output.all} > {output.lt1e5}"
