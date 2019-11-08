@@ -7,7 +7,7 @@ post_process () {
     local covars=$3
 
     local lab_repo_dir="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab"
-    local out_dir_root="${lab_repo_dir}/public-resources/uk_biobank/biomarkers/snpnet/${dataset}/out"
+    local out_dir_root="${OAK}/projects/biomarkers/snpnet/${dataset}"
     local pfile="/oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv"
 
     bash "${lab_repo_dir}/PRS/helper/export_betas.sh" \
