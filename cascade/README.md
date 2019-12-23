@@ -23,8 +23,7 @@ https://drive.google.com/drive/folders/1fGlnrj8Zu1Pox3fmxmFKdcbNVWiN9vhd
 
 ### Imputed dataset
 - We first apply p-value thresholds on "filtered-hits".
-- We currently remove the variants that overlap with the array-genotype variants.
-- We plot non-MHC variants.
+- We plot non-MHC autosomal variants.
 
 #### ToDo
 - This procedure still includes some variants on imputed dataset that are in LD with array dataset (because the `mfs.R` script does not remove variants that are in LD with array variants.)

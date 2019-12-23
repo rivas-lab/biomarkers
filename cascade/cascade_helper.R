@@ -49,7 +49,7 @@ read_imp_sumstats <- function(file, pval_thr){
     df <- fread(file) %>%
     select(-'P.value') %>%
 #     rename('P' = 'P-value') %>%
-    mutate(P = as.numeric(P)) %>%
+    mutate(P = as.numeric(P), CHROM = as.character(CHROM)) %>%
     filter(P <= pval_thr) %>%
     arrange(suppressWarnings(as.numeric(CHROM)), CHROM, POS)
 }
@@ -66,7 +66,6 @@ read_sumstats_all_generic <- function(traits, pval_thr, col, read_func){
         }
     ))
 }
-
 
 read_array_sumstats_all <- function(traits, pval_thr){
     col = 'array'
