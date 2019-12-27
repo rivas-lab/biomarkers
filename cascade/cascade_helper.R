@@ -41,7 +41,7 @@ read_array_sumstats <- function(file, pval_thr){
     ) %>%
     rename('P' = 'P-value') %>%
     mutate(P = as.numeric(P)) %>%
-    filter(P <= pval_thr) %>%
+    filter(P < pval_thr) %>%
     arrange(suppressWarnings(as.numeric(CHROM)), CHROM, POS)
 }
 
@@ -79,14 +79,11 @@ read_imp_sumstats_all <- function(traits, pval_thr){
     read_sumstats_all_generic(traits, pval_thr, col, read_func)
 }
 
-annotate_array_df <- function(array_df, annot.arr, p_thr_df){
+annotate_array_df <- function(array_df, annot.arr){
     array_df %>%
-    rename('ID' = 'MarkerName') %>%
-    inner_join(
-        annot.arr %>% 
-        select(ID, maf, ld_indep, Gene_symbol, Gene, HGVSp, Csq, Consequence), 
-        by='ID'
-    ) %>%
+    rename('ID' = 'MarkerName') %>%    
+    select(-CHROM, -POS, -ALT, -REF) %>%
+    inner_join(annot.arr, by='ID') %>%
     mutate(
         is_outside_of_MHC = (
             (suppressWarnings(as.numeric(CHROM)) != 6) | 
@@ -94,12 +91,6 @@ annotate_array_df <- function(array_df, annot.arr, p_thr_df){
         ),
         is_rare = as.numeric(maf) < 0.01,
         is_autosome = (suppressWarnings(as.numeric(CHROM)) %in% 1:22)
-    ) %>%
-    left_join(
-        p_thr_df, by='Csq'
-    ) %>%
-    filter(
-        P <= p_thr
     )
 }
 

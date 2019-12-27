@@ -1,0 +1,17 @@
+Auto-refreshing stale OAuth token.
+[1] 632
+Sheet-identifying info appears to be a browser URL.
+googlesheets will attempt to extract sheet key from the URL.
+Putative key: 1gwzS0SVZBSKkkHgsoqB5vHo5JpUeYYz8PK2RWrHEq3A
+Sheet successfully identified: "GBE_names"
+Accessing worksheet titled 'GBE_names'.
+Parsed with column specification:
+cols(
+  GBE_category = col_character(),
+  GBE_ID = col_character(),
+  GBE_N = col_double(),
+  GBE_NAME = col_character(),
+  GBE_short_name = col_character(),
+  GBE_short_name_len = col_double()
+)
+[bgzip] /oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2/array.hits.phewas.tsv.gz already exists; do you wish to overwrite (y or n)? 
