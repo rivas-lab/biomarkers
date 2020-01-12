@@ -1,7 +1,15 @@
 # Cascade plot from the meta-analysis results
 
 ## Output
-https://drive.google.com/drive/folders/1fGlnrj8Zu1Pox3fmxmFKdcbNVWiN9vhd
+
+### Google Drive
+
+- https://drive.google.com/drive/folders/1fGlnrj8Zu1Pox3fmxmFKdcbNVWiN9vhd
+
+### local copy
+`/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/cascade/out_v3`
+- cascade.array.hits.tsv.zst
+- cascade.imp.hits.tsv.zst 
 
 ## Lists of input files
 
@@ -24,12 +32,3 @@ https://drive.google.com/drive/folders/1fGlnrj8Zu1Pox3fmxmFKdcbNVWiN9vhd
 ### Imputed dataset
 - We first apply p-value thresholds on "filtered-hits".
 - We plot non-MHC autosomal variants.
-
-#### ToDo
-- This procedure still includes some variants on imputed dataset that are in LD with array dataset (because the `mfs.R` script does not remove variants that are in LD with array variants.)
-- The proper steps should be:
-  1. check if the variants are represented on array
-  2. run clumping
-  3. remove clumped variants if the lead SNPs or other SNPs in the same clump have array variants
-  4. run CM-based filtering as in `mfs.R`
-- Link: https://github.com/rivas-lab/biomarkers/blob/master/filtration/mfs.R
