@@ -11,6 +11,16 @@
 - cascade.array.hits.tsv.zst
 - cascade.imp.hits.tsv.zst 
 
+For the array, please look at the `Csq` column for the variant annotation.
+
+```
+$ zstdcat cascade.array.hits.tsv.zst | awk -v FS='\t' '{print $38}' | sort | uniq -c
+      1 Csq
+   8354 non-coding
+   1323 protein-altering
+     58 protein-truncating
+```
+
 ## Lists of input files
 
 - `imp_hits.lst`: list of meta-analysis results files from the meta-analysis on imputed dataset
@@ -22,7 +32,9 @@
 - `2_cascade_array.hits.ipynb`: aggregate the meta-analysis results for the array, apply p-value thresholding, and annotate the variants.
 - `3_cascade_array.hits.plots.ipynb`: generate cascade plots for the protein-truncating variants and protein-altering variants on genotyping array
 - `4_cascade_imp.hits.ipynb`: aggegate the meta-analysis results for the imputed dataset and apply p-value thresholding
-- `5_cascade_imp.hits.plots.ipynb`: generate cascade plots for the imputed dataset.
+- `5_cascade_imp.hits.plots.ipynb`: generate cascade plots for the non-coding variants.
+
+In `5_cascade_imp.hits.plots.ipynb`, we plot the non-coding portion of the array variants *and* the (filtered) imputed dataset.
 
 ## Methods 
 
