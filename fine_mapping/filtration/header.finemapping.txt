@@ -1,0 +1,1 @@
+index rsid chromosome position allele1 allele2 maf beta se z prob log10bf mean sd mean_incl sd_incl
