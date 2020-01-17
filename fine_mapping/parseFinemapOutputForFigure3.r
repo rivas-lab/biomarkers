@@ -4,8 +4,17 @@
 ##               ##
 ##---------------##
 
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(data.table))
+
 ## Biomarkers
-traits     <- c( 'Alanine_aminotransferase', 'Calcium', 'Direct_bilirubin', 'IGF_1', 'Phosphate', 'Total_protein', 'Albumin', 'Cholesterol', 'eGFR', 'LDL_direct', 'Potassium_in_urine', 'Triglycerides', 'Alkaline_phosphatase', 'Cholesterol_adjstatins', 'Fasting_glucose', 'LDL_direct_adjstatins', 'Rheumatoid_factor', 'Urate', 'Apolipoprotein_A', 'C_reactive_protein', 'Gamma_glutamyltransferase', 'Lipoprotein_A', 'SHBG', 'Urea', 'Apolipoprotein_B', 'Creatinine', 'Glucose', 'Microalbumin_in_urine', 'Sodium_in_urine', 'Vitamin_D', 'Apolipoprotein_B_adjstatins', 'Creatinine_in_urine', 'Glycated_haemoglobin_HbA1c', 'Non_albumin_protein', 'Testosterone', 'Aspartate_aminotransferase', 'Cystatin_C', 'HDL_cholesterol', 'Oestradiol', 'Total_bilirubin' )
+# traits     <- c( 'Alanine_aminotransferase', 'Calcium', 'Direct_bilirubin', 'IGF_1', 'Phosphate', 'Total_protein', 'Albumin', 'Cholesterol', 'eGFR', 'LDL_direct', 'Potassium_in_urine', 'Triglycerides', 'Alkaline_phosphatase', 'Cholesterol_adjstatins', 'Fasting_glucose', 'LDL_direct_adjstatins', 'Rheumatoid_factor', 'Urate', 'Apolipoprotein_A', 'C_reactive_protein', 'Gamma_glutamyltransferase', 'Lipoprotein_A', 'SHBG', 'Urea', 'Apolipoprotein_B', 'Creatinine', 'Glucose', 'Microalbumin_in_urine', 'Sodium_in_urine', 'Vitamin_D', 'Apolipoprotein_B_adjstatins', 'Creatinine_in_urine', 'Glycated_haemoglobin_HbA1c', 'Non_albumin_protein', 'Testosterone', 'Aspartate_aminotransferase', 'Cystatin_C', 'HDL_cholesterol', 'Oestradiol', 'Total_bilirubin' )
+cascade_files <- file.path('../cascade', 'cascade.input.files.tsv')
+traits_df <- fread(cascade_files)
+traits <- traits_df %>% 
+filter(annotation != 'AST_ALT_ratio') %>% 
+select(annotation) %>% pull()
+
 traits_abb <- traits
 
 ## Initialize buffer
@@ -15,7 +24,9 @@ names( finemap ) <- traits
 ## Collect results
 for( trait in traits )
 {
-	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/christian/regions/noSingles_noX/%s_noSingles_noX.txt', trait ), as.is = T )
+# 	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/christian/regions/noSingles_noX/%s_noSingles_noX.txt', trait ), as.is = T )
+# 	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/%s_subset.tsv', trait ), as.is = T )
+	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions/%s.txt', trait ), as.is = T )
 	
 	## Skip if there are no regions for this trait
 	if( nrow( regions ) == 0 ) { next }
@@ -63,4 +74,5 @@ for( trait in traits )
 }
 
 ## Save results
-saveRDS( finemap, file = '/oak/stanford/groups/mrivas/users/christian/finemap_results_figure3.rds' )
+# saveRDS( finemap, file = '/oak/stanford/groups/mrivas/users/christian/finemap_results_figure3.rds' )
+saveRDS( finemap, file = 'finemap_results_figure3.rds' )

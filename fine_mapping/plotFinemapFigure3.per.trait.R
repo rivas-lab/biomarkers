@@ -10,7 +10,8 @@ suppressPackageStartupMessages(library(data.table))
 
 trait <- args[1]
 
-res <- readRDS( '/oak/stanford/groups/mrivas/users/christian/finemap_results_figure3.rds' )
+# res <- readRDS( '/oak/stanford/groups/mrivas/users/christian/finemap_results_figure3.rds' )
+res <- readRDS( 'finemap_results_figure3.rds' )
 
 ####################################################################
 
@@ -35,18 +36,18 @@ plot_names <- setNames(traits %>% select(name) %>% pull(), traits %>% select(ann
 
 ## Plot figure 3
 
-n_regions           <- nrow( res[[trait]] )
-n_signals           <- sum( as.numeric( res[[trait]]$n_signals ) ) 
+n_regions           <- nrow( drop_na ( res[[trait]] ) )
+n_signals           <- sum( as.numeric( drop_na( res[[trait]] )$n_signals ) ) 
 n_signal_per_region <- table(
     	    cut(
-	    	    x      = as.numeric( res[[trait]]$n_signals ),
+	    	    x      = as.numeric( drop_na( res[[trait]] )$n_signals ),
     		    breaks = c( 0, 1, 2, 3, 4, 5, Inf ),
         		labels = c( '1', '2', '3', '4', '5', '6+' )
 	        )
     )
 n_snps_per_signal   <- table(
 	        cut( 
-		        x      = unlist( sapply( res[[trait]]$n_snps_per_signal, function( x ) as.numeric( strsplit( x, split = '\\|' )[[ 1 ]] ), USE.NAMES = F ) ),
+		        x      = unlist( sapply( drop_na( res[[trait]] )$n_snps_per_signal, function( x ) as.numeric( strsplit( x, split = '\\|' )[[ 1 ]] ), USE.NAMES = F ) ),
     		    breaks = c( 0, 1, 5, 10, 20, 50, Inf ),
     	    	labels = c( '1', '2-5', '6-10', '11-20', '21-50', '51+' )
 	        )

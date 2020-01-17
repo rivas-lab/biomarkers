@@ -1,0 +1,2 @@
+Fasting_glucose 7	36649693	49828842
+Fasting_glucose 7	6044515	24388180

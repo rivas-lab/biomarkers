@@ -1,0 +1,3 @@
+Potassium_in_urine 4	2183726	12431610
+Potassium_in_urine 5	407767	6003006
+Potassium_in_urine 6	18930082	35398941
