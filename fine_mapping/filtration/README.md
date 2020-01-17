@@ -1,4 +1,4 @@
-`*_valid.tsv` contains all variants which are in a block with a variant that has p < 5e-8 in the meta-analysis.
+`*_valid.tsv` contains all lead variants and corresponding blocks for variant that have p < 5e-8 in the meta-analysis.
 
 `*_subset.tsv` contains all variants which are in a block with a lead variant that has p < 5e-9 in the meta-analysis.
 
