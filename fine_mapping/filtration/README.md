@@ -1,6 +1,6 @@
 `*_valid.tsv` contains all variants which are in a block with a variant that has p < 5e-8 in the meta-analysis.
 
-`*_subset.tsv` contains all variants which are in a block with a lead variant that has p < 5e-8 in the meta-analysis.
+`*_subset.tsv` contains all variants which are in a block with a lead variant that has p < 5e-9 in the meta-analysis.
 
 `trait_count_dist.cleaned.tsv` contains the counts of the number of causal variants summed across regions that have a posterior greater than the given threshold.
 
