@@ -16,7 +16,6 @@ res <- readRDS( 'finemap_results_figure3.rds' )
 ####################################################################
 
 
-
 ## Define six colors
 colors6 <- c(
 	rgb( 107, 223, 72,  max = 255 ),
@@ -58,7 +57,7 @@ png(file.path('figs', paste0('fig3.', trait, '.png')), width = 1080, height = 30
 layout( matrix( 1 : 2 ), height = c( 0.5, 0.5 ) )
 
 ## Figure 3a
-par( mar = c( 2, 0.25, 0.25, 0.25 ) )
+par( mar = c( 2, 0.5, 0.25, 0.5 ) )
 plot(
 	x    = 0,
 	y    = 0,
@@ -89,7 +88,7 @@ text( 0.5, -0.07, labels = legend_str, xpd = T )
 text( 0, 1.125, labels = sprintf('%s  Number of signals/regions:', plot_names[[trait]]), pos = 4, font = 2 )
 
 ## Figure 3b
-par( mar = c( 2, 0.25, 0.25, 0.25 ) )
+par( mar = c( 2, 0.5, 0.25, 0.5 ) )
 plot(
 	x    = 0,
 	y    = 0,

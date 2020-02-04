@@ -12,7 +12,6 @@ suppressPackageStartupMessages(library(data.table))
 cascade_files <- file.path('../cascade', 'cascade.input.files.tsv')
 traits_df <- fread(cascade_files)
 traits <- traits_df %>% 
-filter(annotation != 'AST_ALT_ratio') %>% 
 select(annotation) %>% pull()
 
 traits_abb <- traits

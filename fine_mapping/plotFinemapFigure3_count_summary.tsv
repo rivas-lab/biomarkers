@@ -1,0 +1,36 @@
+name	trait	n_regions	n_signals	sr1	sr2	sr3	sr4	sr5	sr6+	ss1	ss2-5	ss6-10	ss11-20	ss21-50	ss51+
+Alanine aminotransferase	Alanine_aminotransferase	161	770	1	11	29	39	32	49	55	97	68	94	163	293
+Albumin	Albumin	168	810	2	7	38	40	30	51	57	107	55	97	164	330
+Alkaline phosphatase	Alkaline_phosphatase	248	1364	3	7	44	55	52	87	158	211	127	163	291	414
+Apolipoprotein A	Apolipoprotein_A	180	944	0	5	34	52	32	57	104	127	74	117	169	353
+Apolipoprotein B	Apolipoprotein_B_adjstatins	172	946	1	13	26	38	38	56	136	145	81	116	164	304
+Aspartate aminotransferase	Aspartate_aminotransferase	187	922	0	15	36	42	36	58	71	114	91	115	207	324
+Calcium	Calcium	159	732	4	12	33	39	29	42	61	125	73	85	151	237
+Cholesterol	Cholesterol_adjstatins	202	1079	1	16	32	49	38	66	144	161	109	126	197	342
+C-reactive protein	C_reactive_protein	145	731	2	9	26	37	29	42	84	98	57	69	130	293
+Creatinine	Creatinine	272	1582	1	6	29	44	64	128	117	230	141	188	336	570
+Cystatin C	Cystatin_C	241	1320	0	4	38	55	52	92	93	157	109	138	268	555
+Direct bilirubin	Direct_bilirubin	56	235	1	6	17	12	9	11	23	39	19	35	55	64
+Gamma glutamyltransferase	Gamma_glutamyltransferase	231	1222	0	10	32	64	50	75	108	162	105	131	240	476
+Glucose	Glucose	85	313	2	12	38	14	12	7	27	34	35	45	74	98
+HbA1c	Glycated_haemoglobin_HbA1c	242	1329	0	5	37	64	33	103	144	203	140	157	267	418
+HDL cholesterol	HDL_cholesterol	182	1010	0	4	31	44	39	64	97	128	95	93	194	403
+IGF-1	IGF_1	296	1732	1	11	31	54	59	140	128	238	158	198	367	643
+LDL cholesterol	LDL_direct_adjstatins	183	916	3	15	41	38	37	49	119	154	103	102	161	277
+Lipoprotein A	Lipoprotein_A	4	61	0	0	1	1	0	2	42	7	4	3	3	2
+Phosphate	Phosphate	131	608	0	9	28	40	18	36	37	72	63	80	140	216
+SHBG	SHBG	210	1110	2	7	38	47	37	79	117	156	90	123	203	421
+Testosterone	Testosterone	75	282	2	11	23	18	16	5	13	42	30	41	65	91
+Total bilirubin	Total_bilirubin	99	440	2	6	25	31	14	21	27	63	31	58	94	167
+Total protein	Total_protein	191	1018	1	6	35	38	40	71	73	135	102	111	198	399
+Triglycerides	Triglycerides	167	856	1	10	31	40	32	53	80	123	76	71	165	341
+Urate	Urate	184	905	0	8	36	50	36	54	63	103	68	103	183	385
+Urea	Urea	134	593	0	14	28	38	26	28	45	86	53	55	110	244
+Vitamin D	Vitamin_D	47	196	0	7	14	13	5	8	14	23	14	23	34	88
+Creatinine in urine	Creatinine_in_urine	15	50	0	2	8	3	2	0	2	4	1	7	5	31
+eGFR	eGFR	269	1517	0	13	28	50	60	118	115	207	134	193	303	565
+Microalbumin in urine	Microalbumin_in_urine	1	3	0	0	1	0	0	0	1	1	1	0	0	0
+Potassium in urine	Potassium_in_urine	3	6	1	1	1	0	0	0	1	0	0	0	2	3
+Sodium in urine	Sodium_in_urine	20	66	1	2	9	6	2	0	2	5	2	3	18	36
+Non-albumin protein	Non_albumin_protein	236	1345	1	8	33	54	40	100	116	197	131	178	282	441
+AST to ALT ratio	AST_ALT_ratio	167	840	0	4	32	47	34	50	73	108	70	81	175	333
