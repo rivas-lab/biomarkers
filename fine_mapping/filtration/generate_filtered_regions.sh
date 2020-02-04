@@ -16,7 +16,11 @@ generate_region_file () {
     | awk -v FS='\t' -v trait=${trait} '{print trait, $0}'
 }
 
-cat ../../common/canonical_trait_names.txt | awk -v FS='\t' '(NR>1){print $2}' | grep -v AST_ALT_ratio \
+trait=AST_ALT_ratio
+generate_region_file $trait > filtered_regions/${trait}.txt
+
+exit 0
+cat ../../common/canonical_trait_names.txt | awk -v FS='\t' '(NR>1){print $2}' \
 | while read trait ; do
     generate_region_file $trait > filtered_regions/${trait}.txt
 done

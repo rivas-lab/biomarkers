@@ -13,3 +13,12 @@ To generate the figure for the fine-mapping analysis, we used the following scri
 
 The results are saved and copied to the Google Drive shared folder: https://drive.google.com/drive/folders/1i6w0qQRfrv-vEi7NIMh2yoSsCgTYtdE-
 
+## `plotFinemapFigure3_count_summary.tsv`
+
+We have the following columns in this table file.
+- name: the name of the phenotypes for plotting (from `commons/cascade.input.files.tsv`)
+- trait: the name of the phenotypes (for computing)
+- n_regions: number of regions
+- n_signals: number of signals
+- sr<number>: n_signal_per_region
+- ss<number>: n_snps_per_signal

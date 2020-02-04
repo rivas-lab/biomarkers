@@ -41,6 +41,12 @@ Aspartate_aminotransferase 0.95 120
 Aspartate_aminotransferase 0.9 150
 Aspartate_aminotransferase 0.75 224
 Aspartate_aminotransferase 0.5 357
+AST_ALT_ratio 0.999 67
+AST_ALT_ratio 0.99 94
+AST_ALT_ratio 0.95 129
+AST_ALT_ratio 0.9 155
+AST_ALT_ratio 0.75 208
+AST_ALT_ratio 0.5 342
 Calcium 0.999 52
 Calcium 0.99 71
 Calcium 0.95 94
