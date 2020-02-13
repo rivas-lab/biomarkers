@@ -20,12 +20,23 @@ traits_abb <- traits
 finemap          <- vector( 'list', length( traits ) )
 names( finemap ) <- traits
 
+regions_all <- fread(
+    cmd=paste(
+        'zcat',
+        '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions.txt.gz'
+    )
+) %>%
+rename('CHROM' = '#CHROM')
+
+
 ## Collect results
 for( trait in traits )
 {
 # 	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/christian/regions/noSingles_noX/%s_noSingles_noX.txt', trait ), as.is = T )
-# 	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/%s_subset.tsv', trait ), as.is = T )
-	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions/%s.txt', trait ), as.is = T )
+# 	regions <- read.table( sprintf( '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions/%s.txt', trait ), as.is = T )
+	regions <- regions_all %>% 
+	filter(TRAIT == trait) %>%
+	select(TRAIT, CHROM, BEGIN, END)
 	
 	## Skip if there are no regions for this trait
 	if( nrow( regions ) == 0 ) { next }

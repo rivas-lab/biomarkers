@@ -13,14 +13,17 @@ generate_region_file () {
     | sed -e "s/range//g" \
     | tr "_" "\t" \
     | tr "-" "\t" \
-    | awk -v FS='\t' -v trait=${trait} '{print trait, $0}'
+    | awk -v FS='\t' -v OFS='\t' -v trait="${trait}" \
+    '{print $0, trait, "chr" $1 "_range" $2 "-" $3}'
 }
 
-trait=AST_ALT_ratio
-generate_region_file $trait > filtered_regions/${trait}.txt
+{
+echo "#CHROM BEGIN END TRAIT REGION_ID" | tr " " "\t"
 
-exit 0
 cat ../../common/canonical_trait_names.txt | awk -v FS='\t' '(NR>1){print $2}' \
 | while read trait ; do
-    generate_region_file $trait > filtered_regions/${trait}.txt
-done
+    generate_region_file $trait
+done | sort --parallel 6 -k1,1V -k2,2n -k3,3n
+} | bgzip -@6 -f -l9 > filtered_regions.txt.gz
+
+tabix -c '#' -s 1 -b 2 -e 3 filtered_regions.txt.gz
