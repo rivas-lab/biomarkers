@@ -18,7 +18,7 @@ We tested associations across 2442 variants (MAF > 1% and are located outside of
   - HC243 (Inguinal hernia), rs9379084
   - HC25 (Cataract), rs62621812
 
-## Scripts and Notebook
+## Scripts and Notebooks
 
 - `1_phewas_loci_def.ipynb`: identify the list of variants for PheWAS.
   - `/oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2_imp/finemapped.hits.loci.txt`
@@ -32,6 +32,9 @@ We tested associations across 2442 variants (MAF > 1% and are located outside of
 - `6_var_annot_lookup.sh`: using `tabix`, query the variant annotations for the PheWAS hits (+ LD)
 - `7_merge_with_LD_look_up.ipynb`: merge tables
 - `8_GWAS_catalog_lookup.ipynb`: merge with EBI-EMBL GWAS catalog
+- `9_phewas_summary.ipynb`: summarize the results of manual inspection of novelity (using GWAS catalog)
+- `10_finngen_R2_lookup_prep.ipynb`: for the novel variants from the GWAS catalog, look up, we scan FinnGen R2 dataset to seek for support of replication. This notebook extracts the list of variants for this analysis.
+- `11_finngen_R2_lookup.sh`: We query the FinnGen R2 dataset using `tabix`.
 
 ## Dataset
 
@@ -46,3 +49,12 @@ We have canonicalized variant IDs (`chrom:pos:ref:alt`) for this genotype datase
 ### Phenotype
 
 We use the latest `master.phe` file in the Rivas Lab and focus on the selected phenotypes for PheWAS.
+
+### GWAS catalog
+
+We use the GWAS catalog v.1.0.2 downloaded in `/scratch/groups/mrivas/public_data/gwas_catalog_20200216`.
+
+### FinnGen R2
+
+We use the FinnGen R2 downloaded and pre-processed in `/scratch/groups/mrivas/users/ytanigaw/20200114_FinnGen_R2`.
+
