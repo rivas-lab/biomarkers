@@ -10,3 +10,10 @@
       - `cascade`: (plotting of the variant effects)
       - `phewas`: (testing against other traits)
 - `snpnet`: (generation of polygenic risk scores)
+
+## File location
+
+- GWAS summary statistics
+  - `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/main/<population>/ukb24983_v2_hg19.<trait>.genotyped.glm.linear.gz`
+- M-A
+  - `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/meta_flipfixed/METAANALYSIS_<trait>_1.tbl.gz`
