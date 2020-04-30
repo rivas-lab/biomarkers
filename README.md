@@ -11,7 +11,12 @@
       - `phewas`: (testing against other traits)
 - `snpnet`: (generation of polygenic risk scores)
 
-## File location
+## Key info
+
+- [trait names](https://github.com/rivas-lab/biomarkers/blob/master/common/canonical_trait_names.txt)
+- [plotting color (on Supplementary table ST2)](https://docs.google.com/spreadsheets/d/1j8q1Y7wnMg9nWUm0iT4wJvFfg_hgIXbrtvxelqWHeH4/edit#gid=1708343077)
+
+## File locations
 
 - GWAS summary statistics
   - `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/main/<population>/ukb24983_v2_hg19.<trait>.genotyped.glm.linear.gz`
