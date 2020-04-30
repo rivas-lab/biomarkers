@@ -1,0 +1,36 @@
+#Phenotype	CATEGORY	TRAIT	COLOR
+Alkaline phosphatase	Bone_and_Joint	ALP	#a65628
+Calcium	Bone_and_Joint	CA	#a65628
+Vitamin D	Bone_and_Joint	VITD	#a65628
+Apolipoprotein A	Cardiovascular	APOA	#e41a1c
+Apolipoprotein B	Cardiovascular	APOB	#e41a1c
+C-reactive protein	Cardiovascular	CRP	#e41a1c
+Cholesterol	Cardiovascular	CHOL	#e41a1c
+HDL cholesterol	Cardiovascular	HDL	#e41a1c
+LDL cholesterol	Cardiovascular	LDLD	#e41a1c
+Lipoprotein A	Cardiovascular	LPA	#e41a1c
+Triglycerides	Cardiovascular	TRIG	#e41a1c
+Glucose	Diabetes	GLU	#ff7f00
+HbA1c	Diabetes	HBA1C	#ff7f00
+IGF-1	Hormone	IGF1	#377eb8
+SHBG	Hormone	SHBG	#377eb8
+Testosterone	Hormone	TES	#377eb8
+Alanine aminotransferase	Liver	ALT	#984ea3
+Albumin	Liver	ALB	#984ea3
+Aspartate aminotransferase	Liver	AST	#984ea3
+AST to ALT ratio	Liver	AST2ALT	#984ea3
+Direct bilirubin	Liver	BILD	#984ea3
+Gamma glutamyltransferase	Liver	GGT	#984ea3
+Total bilirubin	Liver	TBIL	#984ea3
+Creatinine	Renal	CRE	#4daf4a
+Creatinine in urine	Renal	UCR	#4daf4a
+Cystatin C	Renal	CYS	#4daf4a
+eGFR	Renal	EGFR	#4daf4a
+Microalbumin in urine	Renal	URMA	#4daf4a
+Non-albumin protein	Renal	NAP	#4daf4a
+Phosphate	Renal	PHOS	#4daf4a
+Potassium in urine	Renal	URK	#4daf4a
+Sodium in urine	Renal	URNA	#4daf4a
+Total protein	Renal	TP	#4daf4a
+Urate	Renal	UA	#4daf4a
+Urea	Renal	BUN	#4daf4a
