@@ -1,0 +1,174 @@
+GBE_ID	Cases	Name
+HC171	778	Alcoholic liver disease / alcoholic cirrhosis
+HC234	1621	Allergy or anaphylactic reaction to food
+HC125	15942	Anaemia
+HC133	2721	Anal fissure
+HC132	18471	Angina
+HC422	1184	Ankylosing spondylitis
+HC135	4985	Anxiety/panic attacks
+HC259	1593	Aortic stenosis
+HC79	5533	Appendicitis
+HC222	782	Arterial embolism
+HC78	15330	Arthritis
+HC382	43619	Asthma
+HC281	12665	Atrial fibrillation
+HC7	8707	Back pain
+BIN_FC10002834	15016	Bilateral oophorectomy (both ovaries removed)
+HC44	980	Bile duct obstruction/ascending cholangitis
+BIN_FC10020126	22341	Bipolar and major depression status any
+cancer1035	1996	Bladder cancer
+BIN_FC11006152	9053	Blood clot or DVT diagnosed by doctor
+cancer1085	1780	Bone metastases / bony secondaries
+HC1	3599	Bowel / intestinal obstruction
+cancer1002	11241	Breast cancer
+HC28	1938	Bronchiectasis
+HC204	1928	Bursitis
+HC414	1309	Cardiomyopathy
+HC295	8150	Carpal tunnel syndrome
+HC25	19446	Cataract
+HC185	6168	Cellulitis
+RH110	2644	Cerebral Infarction
+HC82	1843	Cerebral palsy
+cancer1041	2814	Cervical cancer
+HC418	4317	Cervical spondylosis
+HC225	12961	Cholecystitis
+HC188	14938	Cholelithiasis/gall stones
+HC72	1558	Chronic fatigue syndrome
+HC442	7286	Chronic obstructive airways disease/COPD
+HC298	4393	Chronic sinusitis
+cancer1022	3251	Colon cancer/sigmoid cancer
+HC136	2514	Connective tissue disorder
+HC118	8688	Constipation
+HC322	1652	Crohns disease
+HC283	2711	Cystitis
+BIN_FC6006149	58111	Dentures
+HC41	20456	Depression
+HC221	20437	Diabetes
+RH130	2288	Diabetes Mellitus Type 1
+BIN21068	2294	Diagnosed with Coeliac disease or gluten sensitivity
+HC119	2984	Disc degeneration
+HC262	4033	Diverticular disease/diverticulitis
+HC357	3619	Duodenal ulcer
+BIN_FC1006152	7166	DVT diagnosed by doctor
+HC316	10001	Dyspepsia / indigestion
+HC435	3086	Ear/vestibular disorder
+HC261	11642	Eczema/dermatitis
+HC106	5599	Emphysema/chronic bronchitis
+HC205	5390	Endometriosis
+HC437	4210	Epilepsy
+BIN20406	2510	Ever addicted to alcohol
+BIN1020483	2433	Ever attempted suicide missing is control
+BIN_FC10003591	13772	Ever had hysterectomy (womb removed)
+BIN_FC1006148	2311	Eye problems/disorders Diabetic eye disease
+BIN_FC5006148	3063	Eye problems/disorders Macular degeneration
+cancer1037	4945	Female genital tract cancer
+HC74	1185	Female infertility
+HC346	1166	Fibromyalgia
+HC334	1587	Fracture sternum
+BIN_FC10002463	34441	Fractured/broken bones in last 5 years
+HC8	1637	Gall bladder disease
+HC209	2406	Gastric/stomach ulcers
+HC164	30224	Gastro-oesophageal reflux (GORD) / gastric reflux
+HC109	1418	Gestational hypertension/pre-eclampsia
+HC276	5863	Glaucoma
+HC328	6278	Gout
+HC61	19958	Haemorrhoids / piles
+BIN_FC5006152	79397	Hayfever rhinitis or eczema diagnosed by doctor
+BIN_FC3002247	88992	Hearing difficulty and Deafness
+HC193	1884	Heart arrhythmia
+HC326	12138	Heart attack/myocardial infarction
+HC299	4657	Heart failure/pulmonary odema
+HC231	2326	Heart valve problem/heart murmur
+BIN_FC4006153	13884	Hormone replacement therapy (female only)
+HC198	699	Hyperparathyroidism
+HC215	107391	Hypertension
+HC55	3647	Hyperthyroidism/thyrotoxicosis
+HC308	1096	Hypertrophic cardiomyopathy (HCM / HOCM)
+HC219	19917	Hypothyroidism/myxoedema
+HC95	3783	Inflammatory bowel disease
+HC243	14039	Inguinal hernia
+HC179	7810	Iron deficiency anaemia
+HC64	11554	Irritable bowel syndrome
+HC153	7725	Joint pain
+HC374	2811	Kidney stone/ureter stone/bladder stone
+cancer1034	1093	Kidney/renal cell cancer
+HC196	764	Labyrinthitis
+cancer1020	4382	Large bowel cancer/colorectal cancer
+cancer1048	870	Leukaemia
+cancer1001	1981	Lung cancer
+cancer1047	1852	Lymphoma
+cancer1038	3448	Male genital tract cancer
+cancer1059	4099	Malignant melanoma
+HC253	1199	Meniere's disease
+HC320	1639	Meningitis
+HC86	12177	Migraine
+HC107	978	Miscarriage
+BIN_FC1006149	35828	Mouth ulcers
+HC151	1466	Multiple sclerosis
+HC123	2836	Muscle/soft tissue problem
+HC156	4608	Nasal polyps
+HC263	1327	Nasal/sinus disorder
+HC4	1060	Nephritis
+cancer1053	1429	Non-Hodgkins lymphoma
+cancer1060	16789	Non-melanoma skin cancer
+HC60	9525	Oesophagitis/barretts oesophagus
+RH141	32374	Osteoarthritis
+HC104	948	Osteomyelitis
+HC182	1063	Osteopenia
+HC22	9133	Osteoporosis
+HC32	1502	Other renal/kidney problem
+cancer1039	1207	Ovarian cancer
+HC427	2831	Ovarian cyst or cysts
+HC392	2106	Pancreatitis
+FH1262	21754	Parkinson's disease
+HC385	3516	Peripheral vascular disease
+HC121	2585	Peritonitis
+HC169	1048	Pernicious anaemia
+HC146	4391	Pleural effusion
+HC34	1626	Pleurisy
+HC36	12610	Pneumonia
+HC96	1421	Polymyalgia rheumatica
+cancer1044	6459	Prostate cancer
+HC161	983	Prostatitis
+HC38	5074	Psoriasis
+HC91	954	Psoriatic arthropathy
+HC84	747	Pulmonary fibrosis
+cancer1023	2026	Rectal cancer
+HC16	1057	Rectal or colon adenoma/polyps
+HC294	7081	Renal/kidney failure
+cancer1084	2392	Respiratory/intrathoracic cancer
+HC423	1819	Respiratory failure
+HC362	8173	Respiratory infection
+HC302	3247	Retinal detachment
+HC149	1009	Rheumatic fever
+HC430	5586	Rheumatoid arthritis
+HC150	880	Rosacea
+HC170	841	Sarcoidosis
+HC15	5151	Sciatica
+HC0	1047	Scoliosis
+cancer1003	19168	Skin cancer
+HC364	4082	Sleep apnoea
+HC402	3112	Spinal stenosis
+HC158	3030	Spine arthritis/spondylitis
+HC98	1570	Stomach disorder
+HC110	5783	Stroke
+HC239	4450	Subdural haemorrhage/haematoma
+HC131	2653	Supraventricular tachycardia (SVT)
+HC142	4302	Synovitis
+HC331	2608	Tonsiltis
+HC400	2827	Transient ischaemic attack (TIA)
+HC202	1084	Trapped nerve/compressed nerve
+HC62	1739	Tuberculosis (TB)
+HC201	3147	Ulcerative colitis
+HC274	3311	Umbilical hernia
+HC195	870	Ureteric obstruction/hydronephrosis
+HC140	1767	Urinary frequency / incontinence
+HC404	11507	Urinary tract infection/kidney infection
+HC389	1125	Urticaria
+HC31	5416	Uterine fibroids
+HC254	1122	Uterine polyps
+cancer1040	1610	Uterine/endometrial cancer
+HC405	2041	Vaginal prolapse/uterine prolapse
+HC401	10151	Varicose veins
+HC102	712	Vertigo
+BIN_FC10020126	22341	Bipolar and major depression
