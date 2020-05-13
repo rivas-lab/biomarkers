@@ -18,6 +18,9 @@
 
 ## File locations
 
+- Phenotype file location
+  - 
+  - Residual: `/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/combined.20190810.phe`
 - GWAS summary statistics
   - `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/main/<population>/ukb24983_v2_hg19.<trait>.genotyped.glm.linear.gz`
 - M-A
