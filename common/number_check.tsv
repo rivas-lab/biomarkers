@@ -1,0 +1,36 @@
+Phenotype	Abbreviation	Units of measurement	UKBB field ID	Statin adjustment	Trait category	GBE ID	N	white_british	non_british_white	african	s_asian	e_asian	meta_N	n_loci	PTV	PAV	non-coding	HLA	CNV single	CNV burden	Color	GBE URL
+Alanine aminotransferase	ALT	U/L	30620	N	Liver	INI10030620	363054	318818	23569	6017	7325	1081	355729	190	0	28	162	4	0	0	#984ea3	https://biobankengine.stanford.edu/coding/INI10030620
+Albumin	ALB	g/L	30600	N	Liver	INI10030600	331979	291516	21516	5573	6687	984	325292	203	0	31	172	1	0	1	#984ea3	https://biobankengine.stanford.edu/coding/INI10030600
+Alkaline phosphatase	ALP	U/L	30610	N	Bone and Joint	INI10030610	363228	318953	23582	6019	7337	1082	355891	715	4	86	625	3	0	4	#a65628	https://biobankengine.stanford.edu/coding/INI10030610
+Apolipoprotein A	APOA	g/L	30630	N	Cardiovascular	INI10030630	330515	290198	21403	5550	6682	974	323833	454	3	67	384	2	0	1	#e41a1c	https://biobankengine.stanford.edu/coding/INI10030630
+Apolipoprotein B	APOB	g/L	30640	Y	Cardiovascular	INI20030640	361372	317412	23448	5962	7275	1074	354097	593	1	81	511	0	0	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI20030640
+Aspartate aminotransferase	AST	U/L	30650	N	Liver	INI10030650	361854	317763	23483	5982	7313	1070	354541	267	0	38	229	3	1	0	#984ea3	https://biobankengine.stanford.edu/coding/INI10030650
+AST to ALT ratio	AST2ALT	N/A	NA	N	Liver	INI30030650	361764	317687	23478	5981	7309	1069	354455	226	0	33	193	4	0	0	#984ea3	https://biobankengine.stanford.edu/coding/INI30030650
+C-reactive protein	CRP	mg/L	30710	N	Cardiovascular	INI10030710	362443	318271	23534	6006	7316	1077	355127	351	1	31	319	3	1	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI10030710
+Calcium	CA	mmol/L	30680	N	Bone and Joint	INI10030680	332355	291843	21544	5576	6696	987	325659	208	0	29	179	1	0	0	#a65628	https://biobankengine.stanford.edu/coding/INI10030680
+Cholesterol	CHOL	mmol/L	30690	Y	Cardiovascular	INI20030690	363194	318927	23581	6014	7336	1082	355858	596	0	81	515	0	0	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI20030690
+Creatinine	CRE	umol/L	30700	N	Renal	INI10030700	363070	318800	23576	6016	7339	1081	355731	360	3	43	314	2	0	2	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030700
+Creatinine in urine	UCR	umol/L	30510	N	Renal	INI10030510	352922	310240	22875	5789	7009	1045	345913	7	0	0	7	0	0	0	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030510
+Cystatin C	CYS	mg/L	30720	N	Renal	INI10030720	363090	318819	23580	6015	7338	1082	355752	361	2	39	320	1	2	8	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030720
+Direct bilirubin	BILD	umol/L	30660	N	Liver	INI10030660	308695	271418	20094	5007	6088	915	302607	206	4	34	168	2	1	2	#984ea3	https://biobankengine.stanford.edu/coding/INI10030660
+eGFR	EGFR	ml/min/1.73m2	NA	N	Renal	INI30030700	363070	318800	23576	6016	7339	1081	355731	350	3	41	306	2	0	2	#4daf4a	https://biobankengine.stanford.edu/coding/INI30030700
+Gamma glutamyltransferase	GGT	U/L	30730	N	Liver	INI10030730	363026	318779	23560	6015	7336	1081	355690	424	3	41	380	1	0	1	#984ea3	https://biobankengine.stanford.edu/coding/INI10030730
+Glucose	GLU	mmol/L	30740	N	Diabetes	INI10030740	332079	291605	21520	5568	6693	986	325386	121	1	11	109	0	0	0	#ff7f00	https://biobankengine.stanford.edu/coding/INI10030740
+HbA1c	HBA1C	mmol/mol	30750	N	Diabetes	INI10030750	345814	304659	22518	4847	6895	1032	338919	471	2	54	415	3	3	2	#ff7f00	https://biobankengine.stanford.edu/coding/INI10030750
+HDL cholesterol	HDL	mmol/L	30760	N	Cardiovascular	INI10030760	332323	291830	21542	5573	6689	986	325634	519	5	77	437	2	0	2	#e41a1c	https://biobankengine.stanford.edu/coding/INI10030760
+IGF-1	IGF1	nmol/L	30770	N	Hormone	INI10030770	361107	317114	23453	5974	7283	1074	353824	460	3	38	419	3	0	0	#377eb8	https://biobankengine.stanford.edu/coding/INI10030770
+LDL cholesterol	LDLD	mmol/L	30780	Y	Cardiovascular	INI20030780	362516	318340	23535	6003	7319	1082	355197	563	0	83	480	0	0	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI20030780
+Lipoprotein A	LPA	nmol/L	30790	N	Cardiovascular	INI10030790	290497	253570	19003	5018	6453	980	284044	194	4	31	159	0	0	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI10030790
+Microalbumin in urine	URMA	mg/L	30500	N	Renal	INI10030500	110743	95811	7133	2679	2560	323	108183	6	1	3	2	0	0	0	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030500
+Non-albumin protein	NAP	g/L	NA	N	Renal	INI30030860	331979	291516	21516	5573	6687	984	325292	336	1	35	300	3	1	4	#4daf4a	https://biobankengine.stanford.edu/coding/INI30030860
+Phosphate	PHOS	mmol/L	30810	N	Renal	INI10030810	331826	291391	21497	5568	6685	986	325141	189	0	22	167	3	0	0	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030810
+Potassium in urine	URK	mmol/L	30520	N	Renal	INI10030520	352180	309559	22839	5786	6998	1045	345182	1	0	0	1	0	0	0	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030520
+SHBG	SHBG	nmol/L	30830	N	Hormone	INI10030830	329122	289010	21313	5523	6638	979	322484	415	0	59	356	2	0	0	#377eb8	https://biobankengine.stanford.edu/coding/INI10030830
+Sodium in urine	URNA	mmol/L	30530	N	Renal	INI10030530	352164	309585	22812	5781	6993	1044	345171	15	0	2	13	0	1	0	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030530
+Testosterone	TES	nmol/L	30850	N	Hormone	INI10030850	329274	289117	21344	5453	6680	1008	322594	113	1	12	100	1	0	0	#377eb8	https://biobankengine.stanford.edu/coding/INI10030850
+Total bilirubin	TBIL	umol/L	30840	N	Liver	INI10030840	361681	317605	23472	5978	7313	1069	354368	260	4	39	217	2	1	1	#984ea3	https://biobankengine.stanford.edu/coding/INI10030840
+Total protein	TP	g/L	30860	N	Renal	INI10030860	331979	291516	21516	5573	6687	984	325292	239	0	32	207	2	0	2	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030860
+Triglycerides	TRIG	mmol/L	30870	N	Cardiovascular	INI10030870	362907	318674	23559	6014	7330	1081	355577	424	4	49	371	2	0	0	#e41a1c	https://biobankengine.stanford.edu/coding/INI10030870
+Urate	UA	umol/L	30880	N	Renal	INI10030880	362754	318526	23561	6011	7328	1080	355426	364	3	40	321	5	1	1	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030880
+Urea	BUN	mmol/L	30670	N	Renal	INI10030670	362973	318724	23562	6015	7336	1080	355637	168	1	20	147	1	0	1	#4daf4a	https://biobankengine.stanford.edu/coding/INI10030670
+Vitamin D	VITD	nmol/L	30890	N	Bone and Joint	INI10030890	346130	304818	22617	5845	6425	1055	339705	142	4	13	125	0	0	1	#a65628	https://biobankengine.stanford.edu/coding/INI10030890
