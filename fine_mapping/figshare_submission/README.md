@@ -16,7 +16,7 @@ N. Sinnott-Armstrong*, Y. Tanigawa*, et al, Genetics of 38 blood and urine bioma
 
 Note that we are preparing a revised version of the manuscript and this dataset contains 35 (instead of 38) biomarker phenotypes.
 
-For each trait, we provide a tar archive file which contains the full output from FINEMAP for the regions with at least one genome-wide significant associations (p < 5e-8) from the multi-ethnic GWAS meta-analysis within UK Biobank. The content of the tar archive is organized by directories, named as `chr1<CHROM>/<TRAIT>/range<RANGE>`, and contains the following files:
+For each trait, we provide a tar archive file which contains the full output from FINEMAP for the regions with at least one genome-wide significant associations (p < 5e-9) from the multi-ethnic GWAS meta-analysis within UK Biobank. The content of the tar archive is organized by directories, named as `chr1<CHROM>/<TRAIT>/range<RANGE>`, and contains the following files:
 
 - `GLOBAL_<TRAIT>_chr<CHROM>_range<RANGE>.bdose.zst`
 - `GLOBAL_<TRAIT>_chr<CHROM>_range<RANGE>.config.zst`
