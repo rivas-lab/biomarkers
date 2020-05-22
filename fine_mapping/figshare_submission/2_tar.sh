@@ -5,7 +5,6 @@ SRCNAME=$(readlink -f $0)
 SRCDIR=$(dirname ${SRCNAME})
 PROGNAME=$(basename $SRCNAME)
 VERSION="0.0.1"
-NUM_POS_ARGS="1"
 
 finemap_out_dir='/oak/stanford/groups/mrivas/users/christian'
 region_index=$(readlink -f 'FINEMAP.index.tsv')

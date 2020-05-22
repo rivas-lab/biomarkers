@@ -1,6 +1,6 @@
 # figshare submission
 
-We used [`1_index_file.sh`](1_index_file.sh) to generate the list of regions and [`2_tar.sh`](2_tar.sh) to generate tar files of the fine-mapped associations. We released those data on figshare.
+We used [`1_index_file.sh`](1_index_file.sh) to generate the list of regions and [`2_tar.sh`](2_tar.sh) to generate tar files of the fine-mapped associations. Using the figshare API ([`figshare_API_misc.py`](figshare_API_misc.py) is the functions and we have a usage docs [here](https://gist.github.com/yk-tanigawa/8bc3330bd44cce12e2d6b82c74318bdf)), we uploaded the tar files using [`3_upload_FINEMAP.py`](3_upload_FINEMAP.py) and [`3_upload_FINEMAP.sh`](3_upload_FINEMAP.sh). We used [`4_upload_FINEMAP_check.py`](4_upload_FINEMAP_check.py) to check the completion of the upload.
 
 ## draft of the data descriptor on figshare
 
