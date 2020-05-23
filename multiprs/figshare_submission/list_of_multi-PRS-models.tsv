@@ -1,0 +1,24 @@
+Filename	Trait	Covariate_adjustment	Family_history_adjustment	Note
+weights_adj.HC132.tsv.gz	angina	TRUE	FALSE	
+weights_adj.HC171.tsv.gz	alcoholic cirrhosis	TRUE	FALSE	
+weights_adj.HC188.tsv.gz	gallstones	TRUE	FALSE	
+weights_adj.HC215.tsv.gz	hypertension	TRUE	FALSE	
+weights_adj.HC225.tsv.gz	cholecystitis	TRUE	FALSE	
+weights_adj.HC294.tsv.gz	kidney failure	TRUE	FALSE	
+weights_adj.HC299.tsv.gz	heart failure	TRUE	FALSE	
+weights_adj.HC326.tsv.gz	myocardial infarction	TRUE	FALSE	
+weights_adj.HC328.tsv.gz	gout	TRUE	FALSE	
+weights_adj.T2D_HbA1c_39.tsv.gz	T2D cases vs filtered controls	TRUE	FALSE	multi-PRS model for Eastwood et al. T2D cases in UK Biobank vs filtered controls with HbA1c < 39
+weights_adj.T2D.tsv.gz	T2D	TRUE	FALSE	multi-PRS model for Eastwood et al. T2D cases in UK Biobank
+weights.HC132.tsv.gz	angina	FALSE	FALSE	
+weights.HC171.tsv.gz	alcoholic cirrhosis	FALSE	FALSE	
+weights.HC188.tsv.gz	gallstones	FALSE	FALSE	
+weights.HC215.tsv.gz	hypertension	FALSE	FALSE	
+weights.HC225.tsv.gz	cholecystitis	FALSE	FALSE	
+weights.HC294.tsv.gz	kidney failure	FALSE	FALSE	
+weights.HC299.tsv.gz	heart failure	FALSE	FALSE	
+weights.HC326.tsv.gz	myocardial infarction	FALSE	FALSE	
+weights.HC328.tsv.gz	gout	FALSE	FALSE	
+weights.T2D_HbA1c_39.tsv.gz	T2D cases vs filtered controls	FALSE	FALSE	multi-PRS model for Eastwood et al. T2D cases in UK Biobank vs filtered controls with HbA1c < 39
+weights.T2D.tsv.gz	T2D	FALSE	FALSE	multi-PRS model for Eastwood et al. T2D cases in UK Biobank
+weights_familyhistory.HC326.tsv.gz	myocardial infarction	TRUE	TRUE	multi-PRS model for myocardial infarction adjusted for both covariates (age, sex, PC1-10) and family history of heart disease
