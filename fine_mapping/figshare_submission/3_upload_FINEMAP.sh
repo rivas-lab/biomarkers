@@ -10,7 +10,6 @@ region_index=$(readlink -f 'FINEMAP.index.tsv')
 tar_out_d="/oak/stanford/groups/mrivas/projects/biomarkers/fine_mapping/figshare_submission"
 
 cat ${region_index} | awk '(NR>1){print $1}' | sort -u \
-| grep -v Alanine_aminotransferase \
 | while read trait ; do
 
     tar_file=${tar_out_d}/${trait}.tar
@@ -19,3 +18,4 @@ cat ${region_index} | awk '(NR>1){print $1}' | sort -u \
 
     python 3_upload_FINEMAP.py ${tar_file}
 done
+
