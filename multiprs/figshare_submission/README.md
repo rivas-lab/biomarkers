@@ -44,7 +44,7 @@ For each PRS model listed in [`list_of_multi-PRS-models.tsv`](list_of_multi-PRS-
 - ID: the variant identifier
 - REF: the reference allele
 - ALT: the alternate allele
-- ALT: the risk allele
+- A1: the risk allele
 - weights.<trait>: the coefficients (weights) of the PRS
 
 Note that we used GRCh37/hg19 genome reference in the analysis and the BETA is always reported for the alternate allele.
