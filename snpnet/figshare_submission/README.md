@@ -23,7 +23,7 @@ Note that we are preparing a revised version of the manuscript and this dataset 
 
 We provide the list of 35 biomarkers in "list_of_35_biomarkers.tsv". We used the "Phenotype_name" column in this table for the file names.
 
-For each phenotype, we provide a compressed tab-delimited table, named "snpnet.BETAs.<Phenotype_name>.tsv.gz", which contains the coefficients (weights) of the polygenic risk score and have the following columns:
+For each phenotype, we provide a compressed tab-delimited table, named "snpnet.BETAs.[Phenotype_name].tsv.gz", which contains the coefficients (weights) of the polygenic risk score and have the following columns:
 
 - CHROM: the chromosome
 - POS: the position

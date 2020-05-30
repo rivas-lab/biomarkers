@@ -23,7 +23,7 @@ Note that we are preparing a revised version of the manuscript and this dataset 
 
 We provide the list of 35 biomarkers in "list_of_35_biomarkers.tsv". We used the "Phenotype_name" column in this table for the file names.
 
-For each phenotype, we provide two compressed tab-delimited files, named "<Phenotype_name>.array.gz" and "<Phenotype_name>.imp.gz", which contain the summary statistics for genetic variants on the genotyping array and the imputed dataset, respectively. We used METAL for the meta-analysis for 4 populations (White Brisith, non-Brisith White, African, and South Asian) within UK Biobank. The files have the following columns:
+For each phenotype, we provide two compressed tab-delimited files, named "[Phenotype_name].array.gz" and "[Phenotype_name].imp.gz", which contain the summary statistics for genetic variants on the genotyping array and the imputed dataset, respectively. We used METAL for the meta-analysis for 4 populations (White Brisith, non-Brisith White, African, and South Asian) within UK Biobank. The files have the following columns:
 
 - CHROM: the chromosome
 - POS: the position

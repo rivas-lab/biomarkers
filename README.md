@@ -14,7 +14,7 @@
 ## Key info
 
 - [trait names](https://github.com/rivas-lab/biomarkers/blob/master/common/canonical_trait_names.txt)
-- [plotting color (on Supplementary table ST2)](https://docs.google.com/spreadsheets/d/1j8q1Y7wnMg9nWUm0iT4wJvFfg_hgIXbrtvxelqWHeH4/edit#gid=1708343077)
+- [plotting color (on Supplementary table ST4)](https://docs.google.com/spreadsheets/d/1j8q1Y7wnMg9nWUm0iT4wJvFfg_hgIXbrtvxelqWHeH4/edit#gid=1708343077)
 
 ## figshare data release documents
 
@@ -39,8 +39,7 @@ We uploaded the supplementary data on figshare. Currently, they are not "publish
 
 ## File locations
 
-- Phenotype file location
-  - 
+- [Phenotype file location](covariate_correction/path_to_phenotypes.md)
   - Residual: `/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/combined.20190810.phe`
 - GWAS summary statistics
   - `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/main/<population>/ukb24983_v2_hg19.<trait>.genotyped.glm.linear.gz`
