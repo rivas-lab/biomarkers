@@ -4,6 +4,10 @@
 
 Distinct association signals (top). A single signal at 33 regions, and two to forty signals at 5330 regions across 35 traits. Number of variants in the credible set with >= 99% posterior probability (bottom). 2547 signals were mapped to a single variant in the credible set across 35 traits.
 
+## Shiny App
+
+- https://biobankengine.shinyapps.io/biomarkersfinemap/
+
 ## The fine-mapping analysis was performed with FINEMAP
 
 ## Post-processing
