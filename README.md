@@ -18,7 +18,7 @@
 
 ## figshare data release documents
 
-We uploaded the supplementary data on figshare. Currently, they are under review by data contents curators. They should become available soon.
+We uploaded the supplementary data on figshare.
 
 - [GWAS summary statistics](meta_flipfix/figshare_submission)
   - Title: The meta-analyzed GWAS summary statistics for 35 lab biomarkers described in 'Genetics of 35 blood and urine biomarkers in the UK Biobank'
