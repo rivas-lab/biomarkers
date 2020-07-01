@@ -1,5 +1,7 @@
 # Fuji plot
 
+![Fig 2](/figures/Figure2ArmstrongTanigawa-low-res.jpg)
+
 ```{bash}
 ml load circos
 # ml load R
