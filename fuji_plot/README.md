@@ -1,6 +1,6 @@
 # Fuji plot
 
-![Fig 2](/figures/Figure2ArmstrongTanigawa-low-res.jpg)
+![Fig 2](/figures/Figure2ArmstrongTanigawa-low-res.png)
 
 ```{bash}
 ml load circos
