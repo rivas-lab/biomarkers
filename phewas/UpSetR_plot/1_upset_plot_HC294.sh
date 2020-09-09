@@ -1,10 +1,8 @@
 #!/bin/bash
 set -beEuo pipefail
 
-ml load R/3.6 gcc
-
 GBE_ID='HC294'
-keep_f="none"
+cases="@@@@@/${GBE_ID}.phe"
 
 data_d="@@@@@"
 HC_idx_long_f="${data_d}/ukb37855_ukb40831_icd.annot.tsv.gz"
@@ -23,13 +21,11 @@ trap handler_exit EXIT
 
 if [ ! -d $(dirname ${out_pdf}) ] ; then mkdir -p $(dirname ${out_pdf}) ; fi
 
-# if [ -s "${out_pdf}" ] && [ -s "${out_pdf%.pdf}.png" ] ; then
-#     exit 0
-# fi
-
-# extract the relevant 
+# extract the relevant info
 in_tbl=${tmp_dir}/in_tbl.tsv
+keep_f=${tmp_dir}/keep.phe
 tabix -h ${HC_idx_long_f} ${GBE_ID} > ${in_tbl}
+cat ${cases} | awk -v OFS='\t' '($3==2){print $1, $2}' > ${keep_f}
 
 Rscript /dev/stdin ${in_tbl} ${keep_f} ${out_pdf} << EOF
 suppressWarnings(suppressPackageStartupMessages({ library(tidyverse); library(data.table) }))
@@ -41,9 +37,39 @@ in_tbl  <- args[1]
 keep_f  <- args[2]
 out_pdf <- args[3]
 
+####################
+# function
+####################
+
+upsetplot_wrapper <- function(upset_labels, HC_idx_long, text_scaling_factor=1){
+    upset(
+        fromList(as.list(setNames(
+            upset_labels %>% lapply(function(l){
+            # extract the list of individuals
+                HC_idx_long %>%
+                filter(upset_label == l) %>%
+                pull(IID) %>% unique()
+            }),
+            upset_labels
+        ))),
+        order.by = "freq", show.numbers = "yes",
+        nsets = 20, nintersects = 40,
+        text.scale = text_scaling_factor * c(1.5, 1.2, 1.5, 1.2, 1, .6),
+#         number.angles = 300,
+#         point.size = 2, line.size = .5,
+#         mb.ratio = c(0.6, 0.4),
+        mainbar.y.label = "Number of case individuals",
+        sets.x.label = "# cases per data source"
+    )
+}
+
+####################
+# main
+####################
+
 HC_idx_long <- fread(in_tbl) %>%
 rename('GBE_ID'='#GBE_ID') %>%
-select(-time, -array) %>% 
+select(-time, -array) %>%
 mutate(
     upset_label = if_else(coding == 6, 'Self-reported', paste('ICD-10', val))
 )
@@ -66,59 +92,13 @@ count(upset_label) %>%
 arrange(-n) %>%
 pull(upset_label) -> upset_labels
 
-
-pdf(file=out_pdf, onefile=FALSE, height = 6, width=8)
-upset(
-    fromList(as.list(setNames(
-        upset_labels %>%
-        lapply(function(l){
-        # extract the list of individuals
-            HC_idx_long %>%
-            filter(upset_label == l) %>%
-            pull(IID) %>%
-            unique()
-        }),
-        upset_labels
-    ))), 
-    order.by = "freq",
-    mainbar.y.label = "Number of case individuals", 
-    sets.x.label = "# cases per data source", 
-    nsets = 20, nintersects = NA,
-    text.scale=2,
-#     number.angles = 300, 
-#     point.size = 2, line.size = .5, 
-#     text.scale = c(1.5, 1.2, 1.5, 1.2, 1, .8),
-#     mb.ratio = c(0.6, 0.4),
-    show.numbers = "yes"
-)
-dev.off()
-
-png(file=str_replace(out_pdf, '.pdf$', '.png'), width=800, height=600, units="px", family = "Helvetica")
-upset(
-    fromList(as.list(setNames(
-        upset_labels %>%
-        lapply(function(l){
-        # extract the list of individuals
-            HC_idx_long %>%
-            filter(upset_label == l) %>%
-            pull(IID) %>%
-            unique()
-        }),
-        upset_labels
-    ))), 
-    order.by = "freq",
-    mainbar.y.label = "Number of case individuals", 
-    sets.x.label = "# cases per data source", 
-    nsets = 20, nintersects = NA,
-    text.scale=2,
-#     number.angles = 300, 
-#     point.size = 2, line.size = .5, 
-#     text.scale = c(1.5, 1.2, 1.5, 1.2, 1, .8),
-#     mb.ratio = c(0.6, 0.4),
-    show.numbers = "yes"
-)
+cairo_pdf(out_pdf, height = 6, width = 8, family = "Helvetica")
+upsetplot_wrapper(upset_labels, HC_idx_long)
 dev.off()
 EOF
+
+# convert pdf to png
+inkscape --export-filename=${out_pdf%.pdf}.png ${out_pdf}
 
 echo ${out_pdf}
 echo ${out_pdf%.pdf}.png
