@@ -9,3 +9,5 @@
 `generate_finemap_estimates.sh` has the code for filtering to produce these results.
 
 `genz.R` has the code for generating the valid.tsv entries.
+
+`header.finemapping.txt` has the column header info for `*_subset.tsv`.
