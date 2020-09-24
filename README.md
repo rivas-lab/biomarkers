@@ -1,5 +1,7 @@
 # Genetics of 35 Biomarkers project in the Rivas Lab
 
+![Fig 1](/figures/figure1.png)
+
 ![Fig 2](/figures/Figure2ArmstrongTanigawa-low-res.png)
 
 We characterized the genetics of 35 biomarkers in UK Biobank. We performed the association and fine-mapping analysis to prioritize the causal variants, constructed the polygenic risk score (PRS) models, and evaluated their medical relevance with causal inference and PRS-PheWAS. We demonstrate a new approach, called multi-PRS, to improve PRS by combining PRSs across traits.
