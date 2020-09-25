@@ -1,4 +1,4 @@
-# Genetics of 35 Biomarkers project in the Rivas Lab
+# Genetics of 35 biomarkers project in the Rivas Lab
 
 ![Fig 1](/figures/figure1.png)
 
