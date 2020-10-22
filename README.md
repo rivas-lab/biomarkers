@@ -1,6 +1,6 @@
 # Genetics of 35 biomarkers project in the Rivas Lab
 
-![Fig 1](/figures/figure1.png)
+![Fig 1](/figures/Figure1.png)
 
 ![Fig 2](/figures/Figure2ArmstrongTanigawa-low-res.png)
 
