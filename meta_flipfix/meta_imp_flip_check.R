@@ -11,14 +11,14 @@ meta_sumstats_f <- args[1]
 gwas_f          <- args[2]
 meta_check_img  <- args[3]
 
-# pvar_f          <- '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
+# pvar_f          <- '@@@@@@/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
 pvar_f          <- '/scratch/users/ytanigaw/ukb_imp_v3.mac1.flipcheck.tsv.gz'
 
-# meta_sumstats_f    <- '/oak/stanford/groups/mrivas/projects/biomarkers/meta/plink_imputed/filtered/GLOBAL_Alanine_aminotransferase.sumstats.tsv.gz '
-# meta_flipfixed_f   <- '/oak/stanford/groups/mrivas/projects/biomarkers/meta/plink_imputed/filtered_flipfixed/GLOBAL_Alanine_aminotransferase.sumstats.tsv'
-# meta_flipfixed_img <- '/oak/stanford/groups/mrivas/projects/biomarkers/meta/plink_imputed/filtered_flipfixed/GLOBAL_Alanine_aminotransferase.check.png'
-# gwas_f             <- '/oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Alanine_aminotransferase_all.glm.linear.filtered.maf001.info03.tsv.gz'
-# pvar_f             <- '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
+# meta_sumstats_f    <- '@@@@@@/projects/biomarkers/meta/plink_imputed/filtered/GLOBAL_Alanine_aminotransferase.sumstats.tsv.gz '
+# meta_flipfixed_f   <- '@@@@@@/projects/biomarkers/meta/plink_imputed/filtered_flipfixed/GLOBAL_Alanine_aminotransferase.sumstats.tsv'
+# meta_flipfixed_img <- '@@@@@@/projects/biomarkers/meta/plink_imputed/filtered_flipfixed/GLOBAL_Alanine_aminotransferase.check.png'
+# gwas_f             <- '@@@@@@/projects/biomarkers/sumstats_diverse/white_british/plink_imputed/filtered/INT_Alanine_aminotransferase_all.glm.linear.filtered.maf001.info03.tsv.gz'
+# pvar_f             <- '@@@@@@/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
 
 ##############
 add_flip_annotation <- function(df, pvar_df){

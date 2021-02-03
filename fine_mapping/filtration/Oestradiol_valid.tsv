@@ -1,2 +1,2 @@
 rsid	chromosome	position	allele1	allele2	maf	beta	se	flip	ID	TOTAL_MAF	P	range
-rs3933469	17	7499502	G	A	0.273793	0.0484519	0.00714901	0	17:7499502_G_A	0.268038	1.22334146245862e-11	/oak/stanford/groups/mrivas/users/christian/chr17/Oestradiol/range1154536-17283546
+rs3933469	17	7499502	G	A	0.273793	0.0484519	0.00714901	0	17:7499502_G_A	0.268038	1.22334146245862e-11	@@@@@@/users/christian/chr17/Oestradiol/range1154536-17283546

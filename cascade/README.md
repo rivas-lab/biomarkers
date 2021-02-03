@@ -7,7 +7,7 @@
 - https://drive.google.com/drive/folders/1fGlnrj8Zu1Pox3fmxmFKdcbNVWiN9vhd
 
 ### local copy
-`/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/cascade/out_v3`
+`@@@@@@/users/ytanigaw/repos/rivas-lab/biomarkers/cascade/out_v3`
 - cascade.array.hits.tsv.zst
 - cascade.imp.hits.tsv.zst 
 

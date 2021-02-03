@@ -1,7 +1,7 @@
 #!/bin/bash
 set -beEuo pipefail
 
-find /oak/stanford/groups/mrivas/users/mrivas/repos/ukbb-phenotyping/meta/biomarkers -name "*master*" \
+find @@@@@@/users/mrivas/repos/ukbb-phenotyping/meta/biomarkers -name "*master*" \
     | grep -v male | grep -v eur | sort \
     | while read f ; do 
 phe_name="$(basename $f .masterfile)"

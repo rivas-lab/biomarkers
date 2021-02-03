@@ -1,5 +1,5 @@
 #bim <- data.table::fread("~/scratch/tools/ldsc/1000G_EUR_Phase3_plink/mymerge.bim", header=F)
-bim <- data.table::fread("/oak/stanford/groups/mrivas/projects/biomarkers/meta/decode_wgs_genetic_map_sex_combined.hg19.bed", header=F, col.names=c("CHROM", "POS0", "BP", "RR", "CM"))
+bim <- data.table::fread("@@@@@@/projects/biomarkers/meta/decode_wgs_genetic_map_sex_combined.hg19.bed", header=F, col.names=c("CHROM", "POS0", "BP", "RR", "CM"))
 
 bim$CHROM = gsub("chr", "", bim$CHROM)
 

@@ -6,9 +6,9 @@ SRCDIR=$(dirname ${SRCNAME})
 PROGNAME=$(basename $SRCNAME)
 VERSION="0.0.1"
 
-finemap_out_dir='/oak/stanford/groups/mrivas/users/christian'
+finemap_out_dir='@@@@@@/users/christian'
 region_index=$(readlink -f 'FINEMAP.index.tsv')
-tar_out_d="/oak/stanford/groups/mrivas/projects/biomarkers/fine_mapping/figshare_submission"
+tar_out_d="@@@@@@/projects/biomarkers/fine_mapping/figshare_submission"
 
 path_zfile () {
     local chr_str=$1
@@ -17,7 +17,7 @@ path_zfile () {
     local dir=$4
     echo "${dir}/${chr_str}/${trait}/GLOBAL_${trait}_${chr_str}_${range_str}.z.zst"
 # example filename
-# /oak/stanford/groups/mrivas/users/christian/chr1/Alanine_aminotransferase/GLOBAL_Alanine_aminotransferase_chr1_range41021713-59840021.z.zst    
+# @@@@@@/users/christian/chr1/Alanine_aminotransferase/GLOBAL_Alanine_aminotransferase_chr1_range41021713-59840021.z.zst    
 }
 
 path_range () {
@@ -27,7 +27,7 @@ path_range () {
     local dir=$4
     echo "${dir}/${chr_str}/${trait}/${range_str}"
 # example filename
-# /oak/stanford/groups/mrivas/users/christian/chr1/Alanine_aminotransferase/range41021713-59840021
+# @@@@@@/users/christian/chr1/Alanine_aminotransferase/range41021713-59840021
 }
 
 tar_file_list () {

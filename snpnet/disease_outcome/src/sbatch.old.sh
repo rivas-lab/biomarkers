@@ -13,13 +13,13 @@ cores=$( cat $0 | egrep '^#SBATCH --cores='  | awk -v FS='=' '{print $NF}' )
 mem=$(   cat $0 | egrep '^#SBATCH --mem='    | awk -v FS='=' '{print $NF}' )
 
 phenotype_name=$1
-snpnet_dir="/oak/stanford/groups/mrivas/software/snpnet"
-wrapper="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/PRS/helper/snpnet_wrapper.sh"
+snpnet_dir="@@@@@@/software/snpnet"
+wrapper="@@@@@@/users/ytanigaw/repos/rivas-lab/PRS/helper/snpnet_wrapper.sh"
 family="binomial"
 
 geno_dir="/scratch/users/ytanigaw/tmp/snpnet/geno/array_combined"
-out_dir_root="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome/out"
-phe_file="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome/phe/phe.tsv"
+out_dir_root="@@@@@@/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome/out"
+phe_file="@@@@@@/users/ytanigaw/repos/rivas-lab/biomarkers/snpnet/disease_outcome/phe/phe.tsv"
 covariates="age,sex,Array,PC1,PC2,PC3,PC4"
 
 echo "[$0 $(date +%Y%m%d-%H%M%S)] [start] hostname = $(hostname) SLURM_JOBID = ${SLURM_JOBID:=0}; phenotype = ${phenotype_name}" >&2

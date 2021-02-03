@@ -6,7 +6,7 @@ from statsmodels.stats import multitest
 
 
 
-all_results = glob.glob('/oak/stanford/groups/mrivas/projects/biomarkers_rivas/main/w_british/*hla*gz')
+all_results = glob.glob('@@@@@@/projects/biomarkers_rivas/main/w_british/*hla*gz')
 
 all_results = [result for result in all_results if (("estradiol" not in result) and ("heumatoid" not in result))]
 
@@ -20,7 +20,7 @@ names  = [result.split('w_british/')[1].split('.')[3] for result in all_results]
 
 p_df = pd.DataFrame(columns=['ALL_ID', 'PHE_NAME', 'BETA', 'SE', 'T_STAT', 'P'])
 
-#with open('/oak/stanford/groups/mrivas/users/guhan/repos/ukbb-tools/05_gbe/phenotype_info.tsv', 'r') as map_file:
+#with open('@@@@@@/users/guhan/repos/ukbb-tools/05_gbe/phenotype_info.tsv', 'r') as map_file:
 #    gbe_id_to_name = {line.split()[0]:line.split()[1] for line in map_file}
 
 for result, name in zip(all_results, names):

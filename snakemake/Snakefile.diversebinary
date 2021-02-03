@@ -22,24 +22,24 @@ PLINK2="plink2"
 PLINK="/scratch/PI/pritch/nasa/tools/plink/plink"
 PGEN_DIR="/oak/stanford/projects/ukbb/genotypes/pgen_app13721_v3/"
 # This is different than PGEN_DIR because using the 24983 application instead of 13721
-PSAM_DIR="/oak/stanford/groups/mrivas/projects/biomarkers/gwas/1000g/24983fam/"
+PSAM_DIR="@@@@@@/projects/biomarkers/gwas/1000g/24983fam/"
 
 # The path used for the clumping
 #CLUMP_BED_PATH="/oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british"
 
-CLUMP_BED_PATH="/oak/stanford/groups/mrivas/ukbb/24983/cal/pgen/ukb24983_cal_cALL_v2"
+CLUMP_BED_PATH="@@@@@@/ukbb/24983/cal/pgen/ukb24983_cal_cALL_v2"
 
 
-PHENOTYPE_DIR="/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/"
+PHENOTYPE_DIR="@@@@@@/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/"
 
-population_prefix="/oak/stanford/groups/mrivas/ukbb24983/sqc/population_stratification_w24983_20190809/ukb24983_%s.exclude.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.king.king.cutoff.in.qc.exclude.id"
-population_pca_prefix="covar.binary.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
-#population_pca_prefix="covar.phe" #"/oak/stanford/groups/mrivas/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
+population_prefix="@@@@@@/ukbb24983/sqc/population_stratification_w24983_20190809/ukb24983_%s.exclude.phe" #"@@@@@@/projects/biomarkers/population_definitions/inlier.self_identified_%s.king.king.cutoff.in.qc.exclude.id"
+population_pca_prefix="covar.binary.phe" #"@@@@@@/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
+#population_pca_prefix="covar.phe" #"@@@@@@/projects/biomarkers/population_definitions/inlier.self_identified_%s.pca20.phe"
 
 populations = ["african", "e_asian", "s_asian", "non_british_white", "white_british"]
 #populations = ["african", "chinese", "southasian", "white"]
 
-OUTPUT_PATH="/oak/stanford/groups/mrivas/projects/biomarkers/sumstats_diverse/"
+OUTPUT_PATH="@@@@@@/projects/biomarkers/sumstats_diverse/"
 
 full_subset_list = ["male", "female"]
 #full_subset_list = ["all", "male", "female", "not2d"]
@@ -195,7 +195,7 @@ rule filter_plink:
         partition="pritch,hns,mrivas,normal,owners",
         job_name="filterMAF",
     shell:
-        "Rscript /oak/stanford/groups/mrivas/projects/biomarkers/sumstats/mfs.R {input} {output}"        
+        "Rscript @@@@@@/projects/biomarkers/sumstats/mfs.R {input} {output}"        
 
 
 rule clump_plink:

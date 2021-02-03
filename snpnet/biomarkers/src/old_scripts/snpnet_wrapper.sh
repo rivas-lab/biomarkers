@@ -39,7 +39,7 @@ config_file=${tmp_dir}/config.tsv
 # configure and run
 {
 echo "#key val"
-echo "snpnet_dir /oak/stanford/groups/mrivas/software/snpnet"
+echo "snpnet_dir @@@@@@/software/snpnet"
 echo "mem2bufferSizeDivisionFactor 4"
 echo "cpu ${cores}"
 echo "mem ${mem}"

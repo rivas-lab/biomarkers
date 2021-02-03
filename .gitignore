@@ -1,3 +1,6 @@
+mask_files.sh
+*.unmasked
+
 .DS_Store
 private
 *.zst

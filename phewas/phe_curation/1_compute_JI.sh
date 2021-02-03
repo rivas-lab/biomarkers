@@ -2,7 +2,7 @@
 set -beEuo pipefail
 
 phe_list_f='../phenotypes.txt'
-master_phe_f='/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/master_phe/master.20190509.phe'
+master_phe_f='@@@@@@/ukbb24983/phenotypedata/master_phe/master.20190509.phe'
 JI_f='JI.tsv'
 
 ml load R/3.6 gcc

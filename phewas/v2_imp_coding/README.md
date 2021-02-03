@@ -17,7 +17,7 @@ We tested associations across 43 variants (MAF > 1% and are located outside of M
 ## Scripts and Notebook
 
 - `1_phewas_loci_def.ipynb`: identify the list of variants for PheWAS.
-  - `/oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2_imp/finemapped.hits.loci.txt`
+  - `@@@@@@/projects/biomarkers/phewas/v2_imp/finemapped.hits.loci.txt`
 - `2_phewas.sh`: run the PheWAS analysis for the selected variants & phenotypes
   - `2_phewas.log`: the log file from the plink run
   - The results files are split by chromosome and by phenotype.
@@ -30,7 +30,7 @@ We tested associations across 43 variants (MAF > 1% and are located outside of M
 
 We use the imputed v3 dataset in the Rivas Lab.
 
-- `/oak/stanford/groups/mrivas/ukbb24983/imp/pgen/ukb24983_imp_chr{1-22}_v3.{pgen,pvar.zst,psam}`
+- `@@@@@@/ukbb24983/imp/pgen/ukb24983_imp_chr{1-22}_v3.{pgen,pvar.zst,psam}`
 
 We have canonicalized variant IDs (`chrom:pos:ref:alt`) for this genotype dataset.
 

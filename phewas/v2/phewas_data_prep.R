@@ -7,9 +7,9 @@ gs_auth(token = "/home/users/ytanigaw/.googlesheets_token.rds")
 
 p_thr <- 1e-7
 phewas_phes_file <- '../../common/phenotypes.txt'
-hits_array_file <- '/oak/stanford/groups/mrivas/projects/biomarkers/cascade/out_v3/cascade.array.hits.tsv.zst'
-master_gwas_file <- '/oak/stanford/groups/mrivas/ukbb24983/cal/gwas/freeze/20190516/white_british/ukb24983_v2_hg19.genotyped.glm.20190516.1e3.tsv.gz'
-phewas_out <- '/oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2/array.hits.phewas.tsv'
+hits_array_file <- '@@@@@@/projects/biomarkers/cascade/out_v3/cascade.array.hits.tsv.zst'
+master_gwas_file <- '@@@@@@/ukbb24983/cal/gwas/freeze/20190516/white_british/ukb24983_v2_hg19.genotyped.glm.20190516.1e3.tsv.gz'
+phewas_out <- '@@@@@@/projects/biomarkers/phewas/v2/array.hits.phewas.tsv'
 
 # read the list of phenotypes
 phewas_phes <- phewas_phes_file %>% fread()

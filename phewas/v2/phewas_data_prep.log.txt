@@ -14,4 +14,4 @@ cols(
   GBE_short_name = col_character(),
   GBE_short_name_len = col_double()
 )
-[bgzip] /oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2/array.hits.phewas.tsv.gz already exists; do you wish to overwrite (y or n)? 
+[bgzip] @@@@@@/projects/biomarkers/phewas/v2/array.hits.phewas.tsv.gz already exists; do you wish to overwrite (y or n)? 

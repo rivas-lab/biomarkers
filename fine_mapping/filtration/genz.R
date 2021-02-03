@@ -1,6 +1,6 @@
 library(dplyr)
 vars <- read.table(commandArgs(TRUE)[2], header=F)$V1
-mfi <- data.table::fread("/oak/stanford/groups/mrivas/projects/biomarkers/gwas/mfi_info03.txt.gz", header=T)
+mfi <- data.table::fread("@@@@@@/projects/biomarkers/gwas/mfi_info03.txt.gz", header=T)
 
 
 mfi %>% filter(ID %in% vars) -> mfilt

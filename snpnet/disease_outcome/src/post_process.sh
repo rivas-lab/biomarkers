@@ -6,9 +6,9 @@ post_process () {
     local dataset=$2
     local covars=$3
 
-    local lab_repo_dir="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab"
-    local out_dir_root="/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/${dataset}"
-    local pfile="/oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv"
+    local lab_repo_dir="@@@@@@/users/ytanigaw/repos/rivas-lab"
+    local out_dir_root="@@@@@@/projects/biomarkers/snpnet/${dataset}"
+    local pfile="@@@@@@/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv"
 
     bash "${lab_repo_dir}/PRS/helper/export_betas.sh" \
         "${out_dir_root}" "${phe}" "${covars}"

@@ -6,7 +6,7 @@ meta_tbl_out_f=$2
 img_f=$3
 gwas_f=$4
 
-pvar_f='/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
+pvar_f='@@@@@@/users/ytanigaw/repos/rivas-lab/public-resources/uk_biobank/biomarkers/meta_flipfix/imp_ref_alt_check/ukb_imp_v3.mac1.flipcheck.tsv.gz'
 
 #######################
 prog="$(readlink -f $0)"

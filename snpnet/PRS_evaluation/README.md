@@ -21,7 +21,7 @@ We compute the r2 metric for log-transformed phenotypes across the following set
 ## notebooks
 
 - [`1_eval.ipynb`](1_eval.ipynb): this notebook reads the relevant files and compute the r2 metric.
-  - input phenotype file: `/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/residual_and_logtransformed_and_raw_biomarker_phenotypes_20200524.tsv`
+  - input phenotype file: `@@@@@@/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/residual_and_logtransformed_and_raw_biomarker_phenotypes_20200524.tsv`
   - the results are saved in [`snpnet_prs_eval.tsv`](snpnet_prs_eval.tsv).
 - [`2_combine_res.ipynb`](2_combine_res.ipynb): this notebook fetchs the ST17 and combine with r2 metric.
   - the results are saved in [`combined_table.tsv`](combined_table.tsv)

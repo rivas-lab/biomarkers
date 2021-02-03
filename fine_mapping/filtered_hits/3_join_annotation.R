@@ -9,13 +9,13 @@ anno <- fread('filtered.hits.99.anno.tsv', colClasses = c("#CHROM" = "character"
 regions_all <- fread(
     cmd=paste(
         'zcat',
-        '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions.txt.gz'
+        '@@@@@@/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions.txt.gz'
     )
 ) %>%
 rename('CHROM' = '#CHROM') %>%
 mutate(
     zpath = file.path(
-        '/oak/stanford/groups/mrivas/users/christian',
+        '@@@@@@/users/christian',
         paste0('chr', CHROM), 
         TRAIT, 
         paste0('GLOBAL_', TRAIT, '_chr', CHROM, '_range', BEGIN, '-', END, '.z')

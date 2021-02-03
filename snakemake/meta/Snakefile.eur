@@ -17,7 +17,7 @@ PLINK="/scratch/PI/pritch/nasa/tools/plink/plink"
 # The path used for the clumping
 CLUMP_BED_PATH="/oak/stanford/groups/pritch/users/nasa/biomarkers/ukb_imp_v3.info03.maf001.reassessment.white_british"
 
-OUTPUT_PATH="/oak/stanford/groups/mrivas/projects/biomarkers/meta/european"
+OUTPUT_PATH="@@@@@@/projects/biomarkers/meta/european"
 
 rule all:
     input:

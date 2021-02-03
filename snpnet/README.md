@@ -19,11 +19,11 @@ Experimental versions
 ### Full set 
 
 ```
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC188/results/score/HC188.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC294/results/score/HC294.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC299/results/score/HC299.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC326/results/score/HC326.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/score/INI22402.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC188/results/score/HC188.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC294/results/score/HC294.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC299/results/score/HC299.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC326/results/score/HC326.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/score/INI22402.sscore
 ```
 
 HC171 is missing for this set. Yosuke is looking into it.
@@ -31,10 +31,10 @@ HC171 is missing for this set. Yosuke is looking into it.
 ### Nasa's 223k subset
 
 ```
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/HC171/results/score/HC171.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/HC188/results/score/HC188.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/HC294/results/score/HC294.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/HC299/results/score/HC299.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/HC326/results/score/HC326.sscore
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome_223k/INI22402/results/score/INI22402.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/HC171/results/score/HC171.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/HC188/results/score/HC188.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/HC294/results/score/HC294.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/HC299/results/score/HC299.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/HC326/results/score/HC326.sscore
+@@@@@@/projects/biomarkers/snpnet/disease_outcome_223k/INI22402/results/score/INI22402.sscore
 ```

@@ -15,6 +15,6 @@ mem=$(   cat $0 | egrep '^#SBATCH --mem='    | awk -v FS='=' '{print $NF}' )
 phenotype_name=$1
 family=$2
 
-geno_dir="/oak/stanford/groups/mrivas/ukbb24983/sqc/population_stratification/split"
+geno_dir="@@@@@@/ukbb24983/sqc/population_stratification/split"
 
 bash snpnet_wrapper.sh ${phenotype_name} ${family} ${geno_dir} ${cores} ${mem}

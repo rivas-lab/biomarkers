@@ -1,13 +1,13 @@
 #/bin/bash
 ml load plink2/20190826
 # get the phe files from this directory
-phe_dir="/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/hla_phe_data"
+phe_dir="@@@@@@/users/guhan/sandbox/hla_biomarkers/hla_phe_data"
 # get the covariates from this directory
-covar_file="/oak/stanford/groups/mrivas/ukbb24983/sqc/ukb24983_GWAS_covar.phe"
-out_dir="/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/hla_plink_output"
-batch_dir="/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/plink_batch_logs"
-data_dir="/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/hla_genotype_data"
-white_british="/oak/stanford/groups/mrivas/ukbb24983/sqc/population_stratification/ukb24983_white_british.phe"
+covar_file="@@@@@@/ukbb24983/sqc/ukb24983_GWAS_covar.phe"
+out_dir="@@@@@@/users/guhan/sandbox/hla_biomarkers/hla_plink_output"
+batch_dir="@@@@@@/users/guhan/sandbox/hla_biomarkers/plink_batch_logs"
+data_dir="@@@@@@/users/guhan/sandbox/hla_biomarkers/hla_genotype_data"
+white_british="@@@@@@/ukbb24983/sqc/population_stratification/ukb24983_white_british.phe"
 
 # for every phenotype in phe_dir...
 for pheno in $(ls $phe_dir); do

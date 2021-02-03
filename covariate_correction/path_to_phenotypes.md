@@ -1,11 +1,11 @@
 
 The covariate and phenotype data are stored in the following RDS file:
 
-/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/full.table.RDS
+@@@@@@/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes/full.table.RDS
 
 The full.table.RDS contains the phenotypes, the covariates, and the residualized phenotypes. There are also individual and combine phenotype files for the biomarkers at:
 
-/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes
+@@@@@@/projects/biomarkers/covariate_corrected/outputExtendedNoTDIreduced/phenotypes
 
 
 Covariate adjustment

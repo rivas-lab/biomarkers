@@ -28,9 +28,9 @@ if (nrow(phe_results) < 2) {
     print("Not enough significant results to run BMA!")
 } else {
     print("Reading in dosage file...")
-    dosage <- readRDS("/oak/stanford/groups/mrivas/users/guhan/repos/hla-assoc/scripts/output/ukb_hla_v3_24983_wb.rds")
+    dosage <- readRDS("@@@@@@/users/guhan/repos/hla-assoc/scripts/output/ukb_hla_v3_24983_wb.rds")
     print("Reading in covariates file...")
-    covars <- readRDS("/oak/stanford/groups/mrivas/users/guhan/repos/hla-assoc/scripts/output/ukb_hla_v3_covar_24983_wb.rds")
+    covars <- readRDS("@@@@@@/users/guhan/repos/hla-assoc/scripts/output/ukb_hla_v3_covar_24983_wb.rds")
 
     print("Subsetting to non-sparse columns...")
     # use only columns with more than 5 nonzero entries
@@ -102,9 +102,9 @@ if (nrow(phe_results) < 2) {
     names(results_df) <- c("Posterior mean", "Posterior standard deviation", "Prob!=0", "Phenotype")
     # save output
     print("Saving results to file prefix:")
-    print(paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name))
-    write.table(results_df, paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name, "_","round_all",".tsv"), col.names=NA, quote=FALSE, sep='\t')
-    pdf(paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name, "_round_adjp_all",".pdf"))
+    print(paste0("@@@@@@/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name))
+    write.table(results_df, paste0("@@@@@@/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name, "_","round_all",".tsv"), col.names=NA, quote=FALSE, sep='\t')
+    pdf(paste0("@@@@@@/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104/bma_", phe_name, "_round_adjp_all",".pdf"))
 
     # plot image
     imageplot.bma(glm.out.FF)

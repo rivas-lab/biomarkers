@@ -10,7 +10,7 @@ suppressPackageStartupMessages(require(data.table))
 
 meta_tbl_f <- args[1]
 
-pvar_f <- '/oak/stanford/groups/mrivas/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
+pvar_f <- '@@@@@@/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
 
 ##############
 pvar_df <- fread(pvar_f) %>% rename('CHROM' = '#CHROM')

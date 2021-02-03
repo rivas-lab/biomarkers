@@ -14,7 +14,7 @@ We tested associations across 2442 variants (MAF > 1% and are located outside of
 ## Scripts and Notebooks
 
 - [`1_phewas_loci_def.ipynb`](https://github.com/rivas-lab/biomarkers/blob/master/phewas/v2_imp_nc/1_phewas_loci_def.ipynb): identify the list of variants for PheWAS.
-  - `/oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2_imp/finemapped.hits.loci.txt`
+  - `@@@@@@/projects/biomarkers/phewas/v2_imp/finemapped.hits.loci.txt`
 - [`2_phewas.sh`](https://github.com/rivas-lab/biomarkers/blob/master/phewas/v2_imp_nc/2_phewas.sh): run the PheWAS analysis for the selected variants & phenotypes
   - [`2_phewas.log`](https://github.com/rivas-lab/biomarkers/blob/master/phewas/v2_imp_nc/2_phewas.log): the log file from the plink run
   - The results files are split by chromosome and by phenotype.
@@ -44,7 +44,7 @@ We tested associations across 2442 variants (MAF > 1% and are located outside of
 
 We use the imputed v3 dataset in the Rivas Lab.
 
-- `/oak/stanford/groups/mrivas/ukbb24983/imp/pgen/ukb24983_imp_chr{1-22}_v3.{pgen,pvar.zst,psam}`
+- `@@@@@@/ukbb24983/imp/pgen/ukb24983_imp_chr{1-22}_v3.{pgen,pvar.zst,psam}`
 
 We have canonicalized variant IDs (`chrom:pos:ref:alt`) for this genotype dataset.
 
@@ -54,9 +54,9 @@ We use the latest `master.phe` file in the Rivas Lab and focus on the selected p
 
 ### GWAS catalog
 
-We use the GWAS catalog v.1.0.2 downloaded in `/scratch/groups/mrivas/public_data/gwas_catalog_20200216`.
+We use the GWAS catalog v.1.0.2 downloaded in `@@@@@@@@/public_data/gwas_catalog_20200216`.
 
 ### FinnGen R2
 
-We use the FinnGen R2 downloaded and pre-processed in `/scratch/groups/mrivas/users/ytanigaw/20200114_FinnGen_R2`.
+We use the FinnGen R2 downloaded and pre-processed in `@@@@@@@@/users/ytanigaw/20200114_FinnGen_R2`.
 

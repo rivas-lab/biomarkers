@@ -2,7 +2,7 @@ require(tidyverse)
 require(data.table)
 
 
-read_annot_arr <- function(annot_arr_file = '/oak/stanford/groups/mrivas/private_data/ukbb/variant_filtering/variant_filter_table.tsv.gz'){
+read_annot_arr <- function(annot_arr_file = '@@@@@@/private_data/ukbb/variant_filtering/variant_filter_table.tsv.gz'){
     annot.arr <- fread(
         cmd=paste0('zcat ', annot_arr_file),
         sep='\t', data.table=FALSE

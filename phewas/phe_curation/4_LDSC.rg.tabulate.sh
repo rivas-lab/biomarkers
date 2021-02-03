@@ -1,7 +1,7 @@
 #!/bin/bash
 set -beEuo pipefail
 
-out_d='/oak/stanford/groups/mrivas/projects/biomarkers/phewas/phe_curation/LDSC_rg'
+out_d='@@@@@@/projects/biomarkers/phewas/phe_curation/LDSC_rg'
 rg_tsv=$(dirname ${out_d})/ldscrg.tsv
 
 ############################################################

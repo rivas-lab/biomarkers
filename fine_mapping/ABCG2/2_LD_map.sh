@@ -4,8 +4,8 @@ set -beEuo pipefail
 cpus=6
 mem=50000
 
-out_d="/oak/stanford/groups/mrivas/projects/biomarkers/fine_mapping/ABCG2"
-keep_file="/oak/stanford/groups/mrivas/ukbb24983/sqc/population_stratification_w24983_20190809/ukb24983_white_british.phe"
+out_d="@@@@@@/projects/biomarkers/fine_mapping/ABCG2"
+keep_file="@@@@@@/ukbb24983/sqc/population_stratification_w24983_20190809/ukb24983_white_british.phe"
 
 ml load plink2/20200531
 ml load plink/1.90b6.17

@@ -14,8 +14,8 @@ library(future.apply)
 ####################################################################
 # input
 traits_f <- '../common/canonical_trait_names.txt'
-finemap_out_dir <- '/oak/stanford/groups/mrivas/users/christian'
-filtered_regions <- '/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions.txt.gz'
+finemap_out_dir <- '@@@@@@/users/christian'
+filtered_regions <- '@@@@@@/users/ytanigaw/repos/rivas-lab/biomarkers/fine_mapping/filtration/filtered_regions.txt.gz'
 
 # output
 out_f <- 'FINEMAP_output.tsv'

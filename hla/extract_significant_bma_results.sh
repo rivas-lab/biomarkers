@@ -1,6 +1,6 @@
 #!/bin/bash
 
-output_dir="/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104"
+output_dir="@@@@@@/users/guhan/sandbox/hla_biomarkers/scripts/bma_output_191104"
 
 echo -e "ALL_ID\tposterior_mean\tposterior_sd\tposterior_prob\tPHENO" > "complete_sig_bma_results.tsv"
 for file in $(ls $output_dir | grep tsv); do
