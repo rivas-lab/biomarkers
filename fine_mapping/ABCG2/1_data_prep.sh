@@ -4,15 +4,15 @@ set -beEuo pipefail
 cpus=6
 mem=50000
 
-ukb_d="/oak/stanford/groups/mrivas/ukbb24983"
-out_d="/oak/stanford/groups/mrivas/projects/biomarkers/fine_mapping/ABCG2"
+ukb_d="@@@@@@/ukbb24983"
+out_d="@@@@@@/projects/biomarkers/fine_mapping/ABCG2"
 
 ml load plink2/20200531
 ml load plink/1.90b6.17
 
 # imputation data set
 
-tabix /oak/stanford/groups/mrivas/ukbb24983/imp/annotation/annot.tsv.gz 4:89006461-89157437 \
+tabix @@@@@@/ukbb24983/imp/annotation/annot.tsv.gz 4:89006461-89157437 \
 | grep ABCG2 \
 | awk -v OFS=':' '{print $1, $2, $3, $4}' \
 | plink2 --threads ${cpus} --memory ${mem} \
@@ -25,7 +25,7 @@ mv ${out_d}/ukb24983_ABCG2_imp.log ${out_d}/ukb24983_ABCG2_imp.bed.log
 
 # array data set
 
-zcat /oak/stanford/groups/mrivas/private_data/ukbb/variant_filtering/variant_filter_table.tsv.gz \
+zcat @@@@@@/private_data/ukbb/variant_filtering/variant_filter_table.tsv.gz \
 | grep ABCG2 \
 | cut -f5 \
 | plink2 --threads ${cpus} --memory ${mem} \

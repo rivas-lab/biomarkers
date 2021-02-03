@@ -2,13 +2,13 @@
 set -beEuo pipefail
 
 # input
-imp_annot_f="/oak/stanford/groups/mrivas/ukbb24983/imp/annotation/annot.tsv.gz"
+imp_annot_f="@@@@@@/ukbb24983/imp/annotation/annot.tsv.gz"
 cascade_imp_hits="out_v3/cascade.imp.hits.tsv.zst"
 
 # output
 out_f="out_v3/cascade.imp.hits.var.annot.tsv.gz"
 
-# tabix /oak/stanford/groups/mrivas/ukbb24983/imp/annotation/annot.tsv.gz 1:50839740-50839740
+# tabix @@@@@@/ukbb24983/imp/annotation/annot.tsv.gz 1:50839740-50839740
 
 { 
 tabix -H ${imp_annot_f}

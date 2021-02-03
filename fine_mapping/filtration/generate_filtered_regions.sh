@@ -4,7 +4,7 @@ set -beEuo pipefail
 generate_region_file () {
     local trait=$1
     
-    cut -f 1 /oak/stanford/groups/mrivas/projects/biomarkers/meta/plink_imputed/filtered_hits_5e9/GLOBAL_${trait}.1cm.hits \
+    cut -f 1 @@@@@@/projects/biomarkers/meta/plink_imputed/filtered_hits_5e9/GLOBAL_${trait}.1cm.hits \
     | grep -Ff /dev/stdin ${trait}_valid.tsv \
     | awk '(NR>1) {print $13;}' \
     | xargs -n1 -I % find % -name '*.snp' \

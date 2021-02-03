@@ -1,4 +1,4 @@
-cov <- read.table("/oak/stanford/groups/mrivas/ukbb/24983/sqc/ukb24983_GWAS_covar.phe", header=T)
+cov <- read.table("@@@@@@/ukbb/24983/sqc/ukb24983_GWAS_covar.phe", header=T)
 drawtime <- read.table("covariates/draw_time_minutes.phe", header=T)
 tdi <- read.table("covariates/townsend.phe", header=T)
 dilution <- read.table("covariates/DilutionFactorTimepointZero.phe",header=T)

@@ -4,7 +4,7 @@ set -beEuo pipefail
 meta_tbl_f=$1
 meta_tbl_out_f=$2
 
-pvar_f='/oak/stanford/groups/mrivas/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
+pvar_f='@@@@@@/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
 
 #######################
 prog="$(readlink -f $0)"

@@ -2,11 +2,11 @@ library(dplyr)
 library(broom)
 library(RNOmni)
 
-batch <- data.table::fread("/oak/stanford/groups/mrivas/ukbb24983/fam/ukb2498_cal_v2_s488370.fam", header=F, col.names=c("FID", "IID", "P1", "P2", "S", "Batch")) %>% select(IID, Batch)
+batch <- data.table::fread("@@@@@@/ukbb24983/fam/ukb2498_cal_v2_s488370.fam", header=F, col.names=c("FID", "IID", "P1", "P2", "S", "Batch")) %>% select(IID, Batch)
 
 fix.ethnicity = c("4"=4003, "2"=2004, "1"=1003, "3"=3004, "-1" =6)
 
-eth <- read.table("/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/covariates/ethnicity.phe", header=T, col.names=c("IID", "Ethnicity")) %>%
+eth <- read.table("@@@@@@/projects/biomarkers/covariate_corrected/covariates/ethnicity.phe", header=T, col.names=c("IID", "Ethnicity")) %>%
     mutate(Ethnicity = ifelse(as.character(Ethnicity) %in% names(fix.ethnicity), fix.ethnicity[as.character(Ethnicity)], Ethnicity)) %>%
     mutate(Ethnicity = as.factor(Ethnicity))
 
@@ -32,17 +32,17 @@ covariates <- paste0(paste(kept.terms, collapse=" + "),
      " + ageIndicator * sex + sex * DrawTime + sex * UrineSampleMinutes + sex * FastingTime + ageBin * FastingTime + Ethnicity * sex")
 
 invnorm.pops <- c("african", "e_asian", "s_asian", "white_british", "non_british_white")
-invnorm.keeps <- sprintf("/oak/stanford/groups/mrivas/private_data/ukbb/24983/sqc/population_stratification/ukb24983_%s.phe", invnorm.pops)
+invnorm.keeps <- sprintf("@@@@@@/private_data/ukbb/24983/sqc/population_stratification/ukb24983_%s.phe", invnorm.pops)
 invnorm.ids <- lapply(invnorm.keeps, function(x) read.table(x, header=F)$V1)
 
 #biomarker	name	date_field	aliquot_field
 #30620	Alanine_aminotransferase	30621	30622
 #30600	Albumin	30601	30602
 #30610	Alkaline_phosphatase	30611	30612
-biomarker2day <- read.table("/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/biomarker2day.txt", header=T, stringsAsFactors=F)
+biomarker2day <- read.table("@@@@@@/projects/biomarkers/covariate_corrected/biomarker2day.txt", header=T, stringsAsFactors=F)
 
-bsf <- data.table::fread("/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/phenotypes/raw/biomarkers_serum_full.phe", header=T)
-buf <- data.table::fread("/oak/stanford/groups/mrivas/projects/biomarkers/covariate_corrected/phenotypes/raw/biomarkers_urine_full.phe", header=T)
+bsf <- data.table::fread("@@@@@@/projects/biomarkers/covariate_corrected/phenotypes/raw/biomarkers_serum_full.phe", header=T)
+buf <- data.table::fread("@@@@@@/projects/biomarkers/covariate_corrected/phenotypes/raw/biomarkers_urine_full.phe", header=T)
 
 all_full <- inner_join(bsf, buf)
 

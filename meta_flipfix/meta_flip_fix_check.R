@@ -11,8 +11,8 @@ suppressPackageStartupMessages(require(gridExtra))
 
 pheno_name <- args[1]
 
-prj_dir <- '/oak/stanford/groups/mrivas/projects/biomarkers_rivas'
-pvar_f <- '/oak/stanford/groups/mrivas/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
+prj_dir <- '@@@@@@/projects/biomarkers_rivas'
+pvar_f <- '@@@@@@/ukbb24983/cal/pgen/ukb24983_cal_cALL_v2_hg19.pvar'
 
 meta_sumstats_f  <- file.path(prj_dir, 'meta', paste0('METAANALYSIS_', pheno_name, '_1.tbl'))
 meta_flipfixed_f <- file.path(prj_dir, 'meta_flipfixed', paste0('METAANALYSIS_', pheno_name, '_1.tbl.gz'))

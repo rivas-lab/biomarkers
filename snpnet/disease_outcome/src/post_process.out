@@ -2,19 +2,19 @@
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
 
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/betas.covars.tsv
 PLINK v2.00a2LM AVX2 Intel (26 Aug 2019)       www.cog-genomics.org/plink/2.0/
 (C) 2005-2019 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to /oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/score/HC171.log.
+Logging to @@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/score/HC171.log.
 Options in effect:
   --extract /dev/stdin
   --memory 60000
-  --out /oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/score/HC171
-  --pfile /oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv
-  --score /oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.tsv 1 2 3 header cols=maybefid,maybesid,phenos,nmissallele,dosagesum,scoreavgs,denom,scoresums
+  --out @@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/score/HC171
+  --pfile @@@@@@/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv
+  --score @@@@@@/projects/biomarkers/snpnet/disease_outcome/HC171/results/results/output_iter_1.tsv 1 2 3 header cols=maybefid,maybesid,phenos,nmissallele,dosagesum,scoreavgs,denom,scoresums
   --threads 6
 
 Start time: Thu Nov  7 15:34:05 2019
@@ -22,9 +22,9 @@ Start time: Thu Nov  7 15:34:05 2019
 Using up to 6 compute threads.
 488377 samples (264861 females, 223509 males, 7 ambiguous; 488377 founders)
 loaded from
-/oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.psam.
+@@@@@@/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.psam.
 1080968 variants loaded from
-/oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.pvar.
+@@@@@@/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.pvar.
 Note: No phenotype data present.
 --extract: 0 variants remaining.
 Error: No variants remaining after main filters.
@@ -55,26 +55,26 @@ The following object is masked from ‘package:purrr’:
     transpose
 
 [1] "The selected lambda idx: 41"
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC188/results/results/output_iter_86.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC188/results/results/output_iter_86.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC188/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC188/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC188/results/results/output_iter_86.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC188/results/results/output_iter_86.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC188/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC188/results/betas.covars.tsv
 
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
 
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC294/results/results/output_iter_1.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC294/results/results/output_iter_1.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC294/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC294/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC294/results/results/output_iter_1.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC294/results/results/output_iter_1.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC294/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC294/results/betas.covars.tsv
 
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
 
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC299/results/results/output_iter_1.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC299/results/results/output_iter_1.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC299/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC299/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC299/results/results/output_iter_1.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC299/results/results/output_iter_1.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC299/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC299/results/betas.covars.tsv
 
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
@@ -101,18 +101,18 @@ The following object is masked from ‘package:purrr’:
     transpose
 
 [1] "The selected lambda idx: 36"
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC326/results/results/output_iter_100.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC326/results/results/output_iter_100.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC326/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/HC326/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC326/results/results/output_iter_100.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC326/results/results/output_iter_100.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC326/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/HC326/results/betas.covars.tsv
 
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
 
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.covars.tsv
 
 The following have been reloaded with a version change:
   1) anaconda/sherlock2 => anaconda/Anaconda3-5.3.0-Linux-x86_64_20181113
@@ -139,7 +139,7 @@ The following object is masked from ‘package:purrr’:
     transpose
 
 [1] "The selected lambda idx: 9"
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.covars.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.tsv
-/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/results/output_iter_2.covars.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.tsv
+@@@@@@/projects/biomarkers/snpnet/disease_outcome/INI22402/results/betas.covars.tsv

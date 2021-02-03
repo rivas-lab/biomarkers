@@ -2,7 +2,7 @@
 set -beEuo pipefail
 
 phenotypes=$(cat ../../common/phenotypes.txt | awk '(NR>1){print $1}' | sort -u)
-res_dir="/oak/stanford/groups/mrivas/projects/biomarkers/phewas/v2_imp_nc"
+res_dir="@@@@@@/projects/biomarkers/phewas/v2_imp_nc"
 variants="${res_dir}/finemapped.hits.loci.txt"
 
 # log

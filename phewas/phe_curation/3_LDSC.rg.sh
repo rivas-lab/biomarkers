@@ -7,8 +7,8 @@ PROGNAME=$(basename $SRCNAME)
 VERSION="0.0.1"
 NUM_POS_ARGS="1"
 
-out_d='/oak/stanford/groups/mrivas/projects/biomarkers/phewas/phe_curation/LDSC_rg'
-munged_stats_template="/oak/stanford/groups/mrivas/ukbb24983/array-combined/ldsc/white_british/ukb24983_v2_hg19.<<GBE_ID>>.array-combined.sumstats.gz"
+out_d='@@@@@@/projects/biomarkers/phewas/phe_curation/LDSC_rg'
+munged_stats_template="@@@@@@/ukbb24983/array-combined/ldsc/white_british/ukb24983_v2_hg19.<<GBE_ID>>.array-combined.sumstats.gz"
 GBE_ID_list=$(dirname ${SRCDIR})/phenotypes.txt
 
 # ml load ukbb-tools

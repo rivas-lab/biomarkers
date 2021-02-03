@@ -5,15 +5,15 @@ suppressWarnings(suppressPackageStartupMessages({
 
 # input
 phe_info_f <- file.path('..', '..', 'common', 'biomarker.phenotype.info.tsv')
-rdata_out_root <- '/oak/stanford/groups/mrivas/projects/biomarkers/snpnet/biomarkers'
-pvar <- '/oak/stanford/groups/mrivas/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.pvar.zst'
+rdata_out_root <- '@@@@@@/projects/biomarkers/snpnet/biomarkers'
+pvar <- '@@@@@@/ukbb24983/array_combined/pgen/ukb24983_cal_hla_cnv.pvar.zst'
 covariates <- NULL
 
 # output
 out_f <- 'snpnet.BETAs.%s'
 
 # functions
-source('/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/snpnet/helpers/snpnet_misc.R')
+source('@@@@@@/users/ytanigaw/repos/rivas-lab/snpnet/helpers/snpnet_misc.R')
 # you can see this script on GitHub
 # https://github.com/rivas-lab/snpnet/blob/master/helpers/snpnet_misc.R
 

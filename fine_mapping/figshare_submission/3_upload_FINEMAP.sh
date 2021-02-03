@@ -7,7 +7,7 @@ PROGNAME=$(basename $SRCNAME)
 VERSION="0.0.1"
 
 region_index=$(readlink -f 'FINEMAP.index.tsv')
-tar_out_d="/oak/stanford/groups/mrivas/projects/biomarkers/fine_mapping/figshare_submission"
+tar_out_d="@@@@@@/projects/biomarkers/fine_mapping/figshare_submission"
 
 cat ${region_index} | awk '(NR>1){print $1}' | sort -u \
 | while read trait ; do

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -beEuo pipefail
 
-flipcheck_src="/oak/stanford/groups/mrivas/users/ytanigaw/repos/rivas-lab/ukbb-tools/04_gwas/flipfix/flipcheck.sh"
+flipcheck_src="@@@@@@/users/ytanigaw/repos/rivas-lab/ukbb-tools/04_gwas/flipfix/flipcheck.sh"
 
 cat gwas_imp_WB.lst | while read phe sumstats ; do 
     echo ${phe} ${sumstats}

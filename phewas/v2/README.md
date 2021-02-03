@@ -8,6 +8,6 @@ For GWAS catalog and FinnGen R2 look-up, we used the following scripts
 
 ```
 bash ~/repos/rivas-lab/ukbb-tools/14_LD_map/LD_lookup.sh 17 45360730
-tabix /oak/stanford/groups/mrivas/public_data/snp153/VCF/GCF_000001405.25.gz NC_000017.10:45359511-45359511
+tabix @@@@@@/public_data/snp153/VCF/GCF_000001405.25.gz NC_000017.10:45359511-45359511
 ```
 

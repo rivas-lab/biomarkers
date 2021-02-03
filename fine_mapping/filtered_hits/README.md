@@ -5,7 +5,7 @@ The scripts in this directory extracts the filtered hits (p < 5e-9 AND posterior
 The results are pushed to: https://docs.google.com/spreadsheets/d/12SO-O9-GzSiSRjFJb0WvNi166oiR_Dls-CI9KGc9kGo
 (It is part of the Google Drive shared folder: https://drive.google.com/drive/folders/1i6w0qQRfrv-vEi7NIMh2yoSsCgTYtdE-)
 
-The `region` column in the output file represents the region ID of the variant. The corresponding `.z` files are stored in here: `/oak/stanford/groups/mrivas/users/christian/chr{CHROM}/{TRAIT}/GLOBAL_{TRAIT}_chr{CHROM}_range{BEGIN}-{END}.z`
+The `region` column in the output file represents the region ID of the variant. The corresponding `.z` files are stored in here: `@@@@@@/users/christian/chr{CHROM}/{TRAIT}/GLOBAL_{TRAIT}_chr{CHROM}_range{BEGIN}-{END}.z`
 
 update  (2020/2/12): we add region ID in the output file.
 

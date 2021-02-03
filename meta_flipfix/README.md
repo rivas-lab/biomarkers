@@ -2,8 +2,8 @@
 
 ## Flipfixed/flipchecked results:
 
-- `/oak/stanford/groups/mrivas/projects/biomarkers_rivas/meta_flipfixed/`
-- `/oak/stanford/groups/mrivas/projects/biomarkers/meta/plink_imputed/filtered`
+- `@@@@@@/projects/biomarkers_rivas/meta_flipfixed/`
+- `@@@@@@/projects/biomarkers/meta/plink_imputed/filtered`
 
 ## Methods
 
