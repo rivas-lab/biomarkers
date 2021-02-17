@@ -2,7 +2,6 @@
 
 ## figshare
 
-- Private link: https://figshare.com/s/5ba64acb9a62caea5632
 - DOI: https://doi.org/10.35092/yhjc.12355424
 
 ## draft of the data descriptor on figshare
