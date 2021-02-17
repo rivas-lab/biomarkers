@@ -4,7 +4,6 @@ We used [`1_substats_prep.sh`](1_substats_prep.sh) to prepare the flip-fixed met
 
 ## figshare
 
-- Private link: https://figshare.com/s/cf09ba22307487b0a399
 - DOI: https://doi.org/10.35092/yhjc.12355382
 
 ## draft of the data descriptor on figshare
