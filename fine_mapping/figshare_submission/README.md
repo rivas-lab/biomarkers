@@ -20,7 +20,6 @@ Note that we are preparing a revised version of the manuscript and this dataset 
 
 For each trait, we provide a tar archive file which contains the full output from FINEMAP for the regions with at least one genome-wide significant associations (p < 5e-9) from the multi-ethnic GWAS meta-analysis within UK Biobank. The content of the tar archive is organized by directories, named as `chr[CHROM]/[TRAIT]/range[RANGE]`, and contains the following files:
 
-- `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].bdose.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].config.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].cred<idx>.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].ld.zst`
