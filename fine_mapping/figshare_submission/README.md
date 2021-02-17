@@ -4,9 +4,6 @@ We used [`1_index_file.sh`](1_index_file.sh) to generate the list of regions and
 
 ## figshare
 
-- Private link: https://figshare.com/s/19c49dce0a574e1af101
-- DOI: https://doi.org/10.35092/yhjc.12344351
-
 ## draft of the data descriptor on figshare
 
 ### title
