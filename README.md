@@ -29,9 +29,6 @@ We uploaded the supplementary data on figshare.
 - [GWAS summary statistics](meta_flipfix/figshare_submission)
   - Title: The meta-analyzed GWAS summary statistics for 35 lab biomarkers described in 'Genetics of 35 blood and urine biomarkers in the UK Biobank'
   - DOI: https://doi.org/10.35092/yhjc.12355382
-- [FINEMAP](fine_mapping/figshare_submission)
-  - Title: The fine-mapped associations of 35 lab biomarkers described in 'Genetics of 35 blood and urine biomarkers in the UK Biobank'
-  - DOI: https://doi.org/10.35092/yhjc.12344351
 - [snpnet](snpnet/figshare_submission)
   - Title: The snpnet polygenic risk score coefficients for 35 lab biomarkers described in 'Genetics of 35 blood and urine biomarkers in the UK Biobank'
   - DOI: https://doi.org/10.35092/yhjc.12298838
