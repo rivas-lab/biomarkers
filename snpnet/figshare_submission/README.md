@@ -4,7 +4,6 @@ We used [`export_snpnet_BETA.R`](export_snpnet_BETA.R) to export the PRS coeffic
 
 ## figshare
 
-- Private link: https://figshare.com/s/43dfccf0c59d89f36ea0
 - DOI: https://doi.org/10.35092/yhjc.12298838
 
 ## draft of the data descriptor on figshare
