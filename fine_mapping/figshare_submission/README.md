@@ -4,9 +4,6 @@ We used [`1_index_file.sh`](1_index_file.sh) to generate the list of regions and
 
 ## figshare
 
-- Private link: https://figshare.com/s/19c49dce0a574e1af101
-- DOI: https://doi.org/10.35092/yhjc.12344351
-
 ## draft of the data descriptor on figshare
 
 ### title
@@ -23,7 +20,6 @@ Note that we are preparing a revised version of the manuscript and this dataset 
 
 For each trait, we provide a tar archive file which contains the full output from FINEMAP for the regions with at least one genome-wide significant associations (p < 5e-9) from the multi-ethnic GWAS meta-analysis within UK Biobank. The content of the tar archive is organized by directories, named as `chr[CHROM]/[TRAIT]/range[RANGE]`, and contains the following files:
 
-- `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].bdose.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].config.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].cred<idx>.zst`
 - `GLOBAL_[TRAIT]_chr[CHROM]_range[RANGE].ld.zst`
